@@ -18,6 +18,9 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if(self.isSearching)
+        return [self.filteredArray count];
+    
     return [[OVPatientDataHelper sharedHelper].patients count];
 }
 
@@ -27,16 +30,17 @@
     if(cell == nil)
         cell = [[OVPatientCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"OVPatientCell"];
 
-    NSDictionary *dictionary = [OVPatientDataHelper sharedHelper].patients[indexPath.row];
+    NSDictionary *dictionary;
+    
+    if(self.isSearching)
+        dictionary = self.filteredArray[indexPath.row];
+    else
+        dictionary = [OVPatientDataHelper sharedHelper].patients[indexPath.row];
     
     [cell.labelName setText:dictionary[@"name"]];
     [cell.labelData setText:dictionary[@"birthDate"]];
     [cell.labelCF setText:dictionary[@"cf"]];
-    
-//    [cell.labelName setText:@"Federico Ferrioli"];
-//    [cell.labelData setText:@"30/03/1986"];
-//    [cell.labelCF setText:@"FRRFRC1234578787"];
-//    
+  
     return cell;
 }
 
@@ -48,12 +52,29 @@
     [segue.destinationViewController setTitle:title];
 }
 
-
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    if(controller.searchBar.text.length > 0)
+    {
+        self.isSearching = YES;
+        [self.filteredArray removeAllObjects];
+        
+        for (NSDictionary *dictionary in [OVPatientDataHelper sharedHelper].patients) {
+            if([[dictionary[@"name"] lowercaseString] rangeOfString:searchString].location != NSNotFound) {
+                [self.filteredArray addObject:dictionary];
+            }
+        }
+        
+    }
+    
+    return YES;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [[OVPatientDataHelper sharedHelper] loadData];
+    self.filteredArray = [NSMutableArray array];
 	// Do any additional setup after loading the view.
 }
 

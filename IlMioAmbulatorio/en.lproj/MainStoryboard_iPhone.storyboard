@@ -95,9 +95,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search" id="3HP-sa-UGY">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Hbo-Uv-tRk" id="Afp-HW-Byi"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OVPatientCell" id="hVX-df-dL6" customClass="OVPatientCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
@@ -145,10 +153,20 @@
                     </view>
                     <navigationItem key="navigationItem" id="zE2-2j-Tun"/>
                     <connections>
+                        <outlet property="searchDisplayController" destination="qCk-0M-tVi" id="Pvb-XL-3Fm"/>
                         <outlet property="tableView" destination="UtR-Ua-8hu" id="bpd-NY-FzU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vUI-ic-7L6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="qCk-0M-tVi">
+                    <connections>
+                        <outlet property="delegate" destination="Hbo-Uv-tRk" id="Oy4-fj-MVX"/>
+                        <outlet property="searchBar" destination="3HP-sa-UGY" id="CeB-RZ-sTE"/>
+                        <outlet property="searchContentsController" destination="Hbo-Uv-tRk" id="Ii4-BJ-WPW"/>
+                        <outlet property="searchResultsDataSource" destination="Hbo-Uv-tRk" id="u8I-DW-FBx"/>
+                        <outlet property="searchResultsDelegate" destination="Hbo-Uv-tRk" id="Pwr-uo-nbJ"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="419" y="-679"/>
         </scene>
@@ -271,6 +289,40 @@
             <point key="canvasLocation" x="-506" y="-680"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="OVDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OVDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OVLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OVLoginViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionLogin:"/>
+                <relationship kind="outlet" name="buttonLogin" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="textPassword" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="textUser" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="OVMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OVMasterViewController.h"/>
+        </class>
+        <class className="OVPatientCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OVPatientCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="labelCF" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelData" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelName" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OVPatientViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OVPatientViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
