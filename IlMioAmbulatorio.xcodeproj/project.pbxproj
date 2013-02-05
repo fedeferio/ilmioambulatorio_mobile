@@ -20,6 +20,10 @@
 		65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B477CD16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard */; };
 		65B477D216B2CD5D004DBA9E /* OVMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */; };
 		65B477D516B2CD5D004DBA9E /* OVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D416B2CD5D004DBA9E /* OVDetailViewController.m */; };
+		BA6B437816C14F5600C440CA /* patients.json in Resources */ = {isa = PBXBuildFile; fileRef = BA6B437716C14F5600C440CA /* patients.json */; };
+		BA6B437C16C14F9500C440CA /* OVPatientDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */; };
+		BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */; };
+		BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */; };
 		BABBD94A16B2D46900291C08 /* OVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94916B2D46900291C08 /* OVLoginViewController.m */; };
 		BABBD95F16B2D62700291C08 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94D16B2D62700291C08 /* AFHTTPClient.m */; };
 		BABBD96016B2D62700291C08 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94F16B2D62700291C08 /* AFHTTPRequestOperation.m */; };
@@ -56,6 +60,13 @@
 		65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVMasterViewController.m; sourceTree = "<group>"; };
 		65B477D316B2CD5D004DBA9E /* OVDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OVDetailViewController.h; sourceTree = "<group>"; };
 		65B477D416B2CD5D004DBA9E /* OVDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVDetailViewController.m; sourceTree = "<group>"; };
+		BA6B437716C14F5600C440CA /* patients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = patients.json; sourceTree = "<group>"; };
+		BA6B437A16C14F9500C440CA /* OVPatientDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVPatientDataHelper.h; sourceTree = "<group>"; };
+		BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVPatientDataHelper.m; sourceTree = "<group>"; };
+		BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientViewController.h; path = ViewControllers/OVPatientViewController.h; sourceTree = "<group>"; };
+		BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientViewController.m; path = ViewControllers/OVPatientViewController.m; sourceTree = "<group>"; };
+		BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientCell.h; path = Support/OVPatientCell.h; sourceTree = "<group>"; };
+		BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientCell.m; path = Support/OVPatientCell.m; sourceTree = "<group>"; };
 		BABBD94816B2D46900291C08 /* OVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVLoginViewController.h; path = ViewControllers/OVLoginViewController.h; sourceTree = "<group>"; };
 		BABBD94916B2D46900291C08 /* OVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVLoginViewController.m; path = ViewControllers/OVLoginViewController.m; sourceTree = "<group>"; };
 		BABBD94C16B2D62700291C08 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -135,6 +146,9 @@
 		65B477B816B2CD5D004DBA9E /* IlMioAmbulatorio */ = {
 			isa = PBXGroup;
 			children = (
+				BA6B437916C14F6E00C440CA /* Model */,
+				BA6B437516C14E5D00C440CA /* Resources */,
+				BA90CA2C16C1225D009EBEA9 /* Support */,
 				BABBD94B16B2D62700291C08 /* AFNetworking */,
 				BABBD94616B2D41500291C08 /* ViewControllers */,
 				65B477C116B2CD5D004DBA9E /* OVAppDelegate.h */,
@@ -164,11 +178,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA6B437516C14E5D00C440CA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA6B437716C14F5600C440CA /* patients.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BA6B437916C14F6E00C440CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA6B437A16C14F9500C440CA /* OVPatientDataHelper.h */,
+				BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BA90CA2C16C1225D009EBEA9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */,
+				BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
 		BABBD94616B2D41500291C08 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BABBD94816B2D46900291C08 /* OVLoginViewController.h */,
 				BABBD94916B2D46900291C08 /* OVLoginViewController.m */,
+				BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */,
+				BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -257,6 +299,7 @@
 				65B477C916B2CD5D004DBA9E /* Default-568h@2x.png in Resources */,
 				65B477CC16B2CD5D004DBA9E /* MainStoryboard_iPhone.storyboard in Resources */,
 				65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */,
+				BA6B437816C14F5600C440CA /* patients.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +324,9 @@
 				BABBD96516B2D62700291C08 /* AFURLConnectionOperation.m in Sources */,
 				BABBD96616B2D62700291C08 /* AFXMLRequestOperation.m in Sources */,
 				BABBD96716B2D62700291C08 /* UIImageView+AFNetworking.m in Sources */,
+				BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */,
+				BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */,
+				BA6B437C16C14F9500C440CA /* OVPatientDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

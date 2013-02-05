@@ -1,0 +1,14 @@
+[
+	{
+		"id":"1",
+		"name":"Federico Ferrioli",
+		"birthDate":"30/03/1986",
+		"cf":"FRRFRC123456"
+	},
+	{
+		"id":"2",
+		"name":"Andrea Mazzini",
+		"birthDate":"19/05/1984",
+		"cf":"NDRMZZ123456"
+	}
+]
