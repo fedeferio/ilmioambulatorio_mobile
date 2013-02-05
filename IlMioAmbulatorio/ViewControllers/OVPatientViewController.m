@@ -9,6 +9,7 @@
 #import "OVPatientViewController.h"
 #import "OVPatientCell.h"
 #import "OVPatientDataHelper.h"
+#import "OVPatientDetailViewController.h"
 
 @interface OVPatientViewController ()
 
@@ -47,9 +48,20 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    NSString *title = [NSString stringWithFormat:@"Riga: %d", path.row];
+
+    NSDictionary *dictionary;
     
-    [segue.destinationViewController setTitle:title];
+    if(self.isSearching)
+        dictionary = self.filteredArray[path.row];
+    else
+        dictionary = [OVPatientDataHelper sharedHelper].patients[path.row];
+    
+    [((OVPatientDetailViewController *)segue.destinationViewController) setPatientId:[dictionary[@"id"] intValue]];
+}
+
+- (void) searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
+{
+    self.isSearching = NO;
 }
 
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
@@ -66,6 +78,8 @@
         }
         
     }
+    else
+        self.isSearching = NO;
     
     return YES;
 }

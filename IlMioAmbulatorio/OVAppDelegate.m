@@ -7,8 +7,30 @@
 //
 
 #import "OVAppDelegate.h"
+#import "AMSlideOutNavigationController.h"
 
 @implementation OVAppDelegate
+
+- (void)userDidLogin
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+    self.slideOut = [AMSlideOutNavigationController slideOutNavigation];
+    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPatientViewController"];
+    [self.slideOut addSectionWithTitle:@"Menu"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Patients"
+                                          andIcon:@""];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPatientViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Patients"
+                                          andIcon:@""];
+    
+    [self.window setRootViewController:self.slideOut];
+    
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -18,8 +40,10 @@
 	    UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
 	    splitViewController.delegate = (id)navigationController.topViewController;
 	}
+
     return YES;
 }
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {

@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class AMSlideOutNavigationController;
+
 @interface OVAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) AMSlideOutNavigationController *slideOut;
+
+-(void)userDidLogin;
 
 @end

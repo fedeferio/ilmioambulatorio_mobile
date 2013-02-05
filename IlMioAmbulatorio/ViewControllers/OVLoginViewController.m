@@ -8,6 +8,7 @@
 
 #import "OVLoginViewController.h"
 #import "AFHTTPClient.h"
+#import "OVAppDelegate.h"
 
 @interface OVLoginViewController ()
 
@@ -29,6 +30,9 @@
 
 - (IBAction)actionLogin:(id)sender
 {
+    [((OVAppDelegate*) [UIApplication sharedApplication].delegate) userDidLogin];
+    
+    return;
     
 	AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://webapp.ilmioambulatorio.it/"]];
     //	[httpClient setDefaultHeader:@"X-CSRF-Token" value:[PMUserHandler sharedHelper].tokenCSRF];

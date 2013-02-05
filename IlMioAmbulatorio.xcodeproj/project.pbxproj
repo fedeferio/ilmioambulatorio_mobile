@@ -20,8 +20,16 @@
 		65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B477CD16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard */; };
 		65B477D216B2CD5D004DBA9E /* OVMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */; };
 		65B477D516B2CD5D004DBA9E /* OVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D416B2CD5D004DBA9E /* OVDetailViewController.m */; };
+		BA447A2D16C168F700F78030 /* apple.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BA447A2C16C168F700F78030 /* apple.jpeg */; };
 		BA6B437816C14F5600C440CA /* patients.json in Resources */ = {isa = PBXBuildFile; fileRef = BA6B437716C14F5600C440CA /* patients.json */; };
 		BA6B437C16C14F9500C440CA /* OVPatientDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */; };
+		BA6B438816C15E1600C440CA /* AMSlideOutNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B438116C15E1600C440CA /* AMSlideOutNavigationController.m */; };
+		BA6B438916C15E1600C440CA /* AMSlideTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B438316C15E1600C440CA /* AMSlideTableCell.m */; };
+		BA6B438A16C15E1600C440CA /* AMSlideTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B438516C15E1600C440CA /* AMSlideTableHeader.m */; };
+		BA6B438B16C15E1600C440CA /* iconSlide.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6B438616C15E1600C440CA /* iconSlide.png */; };
+		BA6B438C16C15E1600C440CA /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6B438716C15E1600C440CA /* iconSlide@2x.png */; };
+		BA6B438E16C15E3600C440CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6B438D16C15E3600C440CA /* QuartzCore.framework */; };
+		BA6B439116C163CE00C440CA /* OVPatientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */; };
 		BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */; };
 		BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */; };
 		BABBD94A16B2D46900291C08 /* OVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94916B2D46900291C08 /* OVLoginViewController.m */; };
@@ -60,9 +68,22 @@
 		65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVMasterViewController.m; sourceTree = "<group>"; };
 		65B477D316B2CD5D004DBA9E /* OVDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OVDetailViewController.h; sourceTree = "<group>"; };
 		65B477D416B2CD5D004DBA9E /* OVDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVDetailViewController.m; sourceTree = "<group>"; };
+		BA447A2C16C168F700F78030 /* apple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple.jpeg; path = ../../../../Desktop/apple.jpeg; sourceTree = "<group>"; };
 		BA6B437716C14F5600C440CA /* patients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = patients.json; sourceTree = "<group>"; };
 		BA6B437A16C14F9500C440CA /* OVPatientDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVPatientDataHelper.h; sourceTree = "<group>"; };
 		BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVPatientDataHelper.m; sourceTree = "<group>"; };
+		BA6B437F16C15E1600C440CA /* AMSlideOutGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideOutGlobals.h; sourceTree = "<group>"; };
+		BA6B438016C15E1600C440CA /* AMSlideOutNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideOutNavigationController.h; sourceTree = "<group>"; };
+		BA6B438116C15E1600C440CA /* AMSlideOutNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideOutNavigationController.m; sourceTree = "<group>"; };
+		BA6B438216C15E1600C440CA /* AMSlideTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideTableCell.h; sourceTree = "<group>"; };
+		BA6B438316C15E1600C440CA /* AMSlideTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideTableCell.m; sourceTree = "<group>"; };
+		BA6B438416C15E1600C440CA /* AMSlideTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMSlideTableHeader.h; sourceTree = "<group>"; };
+		BA6B438516C15E1600C440CA /* AMSlideTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMSlideTableHeader.m; sourceTree = "<group>"; };
+		BA6B438616C15E1600C440CA /* iconSlide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconSlide.png; sourceTree = "<group>"; };
+		BA6B438716C15E1600C440CA /* iconSlide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconSlide@2x.png"; sourceTree = "<group>"; };
+		BA6B438D16C15E3600C440CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BA6B438F16C163CE00C440CA /* OVPatientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientDetailViewController.h; path = ViewControllers/OVPatientDetailViewController.h; sourceTree = "<group>"; };
+		BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientDetailViewController.m; path = ViewControllers/OVPatientDetailViewController.m; sourceTree = "<group>"; };
 		BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientViewController.h; path = ViewControllers/OVPatientViewController.h; sourceTree = "<group>"; };
 		BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientViewController.m; path = ViewControllers/OVPatientViewController.m; sourceTree = "<group>"; };
 		BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientCell.h; path = Support/OVPatientCell.h; sourceTree = "<group>"; };
@@ -99,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6B438E16C15E3600C440CA /* QuartzCore.framework in Frameworks */,
 				BABBD96F16B2D73B00291C08 /* CFNetwork.framework in Frameworks */,
 				BABBD96D16B2D73100291C08 /* SystemConfiguration.framework in Frameworks */,
 				BABBD96B16B2D72B00291C08 /* MobileCoreServices.framework in Frameworks */,
@@ -115,6 +137,7 @@
 		65B477A316B2CD5D004DBA9E = {
 			isa = PBXGroup;
 			children = (
+				BA6B438D16C15E3600C440CA /* QuartzCore.framework */,
 				BABBD96E16B2D73B00291C08 /* CFNetwork.framework */,
 				BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */,
 				BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */,
@@ -146,6 +169,7 @@
 		65B477B816B2CD5D004DBA9E /* IlMioAmbulatorio */ = {
 			isa = PBXGroup;
 			children = (
+				BA6B437D16C15DF300C440CA /* Libs */,
 				BA6B437916C14F6E00C440CA /* Model */,
 				BA6B437516C14E5D00C440CA /* Resources */,
 				BA90CA2C16C1225D009EBEA9 /* Support */,
@@ -181,6 +205,7 @@
 		BA6B437516C14E5D00C440CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BA447A2C16C168F700F78030 /* apple.jpeg */,
 				BA6B437716C14F5600C440CA /* patients.json */,
 			);
 			name = Resources;
@@ -193,6 +218,30 @@
 				BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BA6B437D16C15DF300C440CA /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				BA6B437E16C15E1600C440CA /* AMSlideOut */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		BA6B437E16C15E1600C440CA /* AMSlideOut */ = {
+			isa = PBXGroup;
+			children = (
+				BA6B437F16C15E1600C440CA /* AMSlideOutGlobals.h */,
+				BA6B438016C15E1600C440CA /* AMSlideOutNavigationController.h */,
+				BA6B438116C15E1600C440CA /* AMSlideOutNavigationController.m */,
+				BA6B438216C15E1600C440CA /* AMSlideTableCell.h */,
+				BA6B438316C15E1600C440CA /* AMSlideTableCell.m */,
+				BA6B438416C15E1600C440CA /* AMSlideTableHeader.h */,
+				BA6B438516C15E1600C440CA /* AMSlideTableHeader.m */,
+				BA6B438616C15E1600C440CA /* iconSlide.png */,
+				BA6B438716C15E1600C440CA /* iconSlide@2x.png */,
+			);
+			path = AMSlideOut;
 			sourceTree = "<group>";
 		};
 		BA90CA2C16C1225D009EBEA9 /* Support */ = {
@@ -211,6 +260,8 @@
 				BABBD94916B2D46900291C08 /* OVLoginViewController.m */,
 				BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */,
 				BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */,
+				BA6B438F16C163CE00C440CA /* OVPatientDetailViewController.h */,
+				BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -300,6 +351,9 @@
 				65B477CC16B2CD5D004DBA9E /* MainStoryboard_iPhone.storyboard in Resources */,
 				65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */,
 				BA6B437816C14F5600C440CA /* patients.json in Resources */,
+				BA6B438B16C15E1600C440CA /* iconSlide.png in Resources */,
+				BA6B438C16C15E1600C440CA /* iconSlide@2x.png in Resources */,
+				BA447A2D16C168F700F78030 /* apple.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +381,10 @@
 				BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */,
 				BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */,
 				BA6B437C16C14F9500C440CA /* OVPatientDataHelper.m in Sources */,
+				BA6B438816C15E1600C440CA /* AMSlideOutNavigationController.m in Sources */,
+				BA6B438916C15E1600C440CA /* AMSlideTableCell.m in Sources */,
+				BA6B438A16C15E1600C440CA /* AMSlideTableHeader.m in Sources */,
+				BA6B439116C163CE00C440CA /* OVPatientDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
