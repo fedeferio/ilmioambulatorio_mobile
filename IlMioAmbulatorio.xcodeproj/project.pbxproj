@@ -20,6 +20,11 @@
 		65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B477CD16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard */; };
 		65B477D216B2CD5D004DBA9E /* OVMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */; };
 		65B477D516B2CD5D004DBA9E /* OVDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D416B2CD5D004DBA9E /* OVDetailViewController.m */; };
+		BA159BAC16C8ED6F00D15425 /* OVData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA159BAA16C8ED6F00D15425 /* OVData.xcdatamodeld */; };
+		BA159BAE16C8EDFA00D15425 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA159BAD16C8EDFA00D15425 /* CoreData.framework */; };
+		BA159BB116C8EEF000D15425 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB016C8EEF000D15425 /* Patient.m */; };
+		BA159BB416C8F37600D15425 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB316C8F37600D15425 /* CoreDataTableViewController.m */; };
+		BA159BB716C9387E00D15425 /* OVTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB616C9387E00D15425 /* OVTableTextCell.m */; };
 		BA447A2D16C168F700F78030 /* apple.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BA447A2C16C168F700F78030 /* apple.jpeg */; };
 		BA6B437816C14F5600C440CA /* patients.json in Resources */ = {isa = PBXBuildFile; fileRef = BA6B437716C14F5600C440CA /* patients.json */; };
 		BA6B437C16C14F9500C440CA /* OVPatientDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */; };
@@ -68,6 +73,14 @@
 		65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVMasterViewController.m; sourceTree = "<group>"; };
 		65B477D316B2CD5D004DBA9E /* OVDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OVDetailViewController.h; sourceTree = "<group>"; };
 		65B477D416B2CD5D004DBA9E /* OVDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVDetailViewController.m; sourceTree = "<group>"; };
+		BA159BAB16C8ED6F00D15425 /* OVData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OVData.xcdatamodel; sourceTree = "<group>"; };
+		BA159BAD16C8EDFA00D15425 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BA159BAF16C8EEF000D15425 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		BA159BB016C8EEF000D15425 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		BA159BB216C8F37600D15425 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ../CoreDataTableViewController.h; sourceTree = "<group>"; };
+		BA159BB316C8F37600D15425 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ../CoreDataTableViewController.m; sourceTree = "<group>"; };
+		BA159BB516C9387E00D15425 /* OVTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTableTextCell.h; sourceTree = "<group>"; };
+		BA159BB616C9387E00D15425 /* OVTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTableTextCell.m; sourceTree = "<group>"; };
 		BA447A2C16C168F700F78030 /* apple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple.jpeg; path = ../../../../Desktop/apple.jpeg; sourceTree = "<group>"; };
 		BA6B437716C14F5600C440CA /* patients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = patients.json; sourceTree = "<group>"; };
 		BA6B437A16C14F9500C440CA /* OVPatientDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVPatientDataHelper.h; sourceTree = "<group>"; };
@@ -120,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA159BAE16C8EDFA00D15425 /* CoreData.framework in Frameworks */,
 				BA6B438E16C15E3600C440CA /* QuartzCore.framework in Frameworks */,
 				BABBD96F16B2D73B00291C08 /* CFNetwork.framework in Frameworks */,
 				BABBD96D16B2D73100291C08 /* SystemConfiguration.framework in Frameworks */,
@@ -137,11 +151,6 @@
 		65B477A316B2CD5D004DBA9E = {
 			isa = PBXGroup;
 			children = (
-				BA6B438D16C15E3600C440CA /* QuartzCore.framework */,
-				BABBD96E16B2D73B00291C08 /* CFNetwork.framework */,
-				BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */,
-				BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */,
-				BABBD96816B2D72200291C08 /* libz.1.2.5.dylib */,
 				65B477B816B2CD5D004DBA9E /* IlMioAmbulatorio */,
 				65B477B116B2CD5D004DBA9E /* Frameworks */,
 				65B477AF16B2CD5D004DBA9E /* Products */,
@@ -159,6 +168,12 @@
 		65B477B116B2CD5D004DBA9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA159BAD16C8EDFA00D15425 /* CoreData.framework */,
+				BA6B438D16C15E3600C440CA /* QuartzCore.framework */,
+				BABBD96E16B2D73B00291C08 /* CFNetwork.framework */,
+				BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */,
+				BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */,
+				BABBD96816B2D72200291C08 /* libz.1.2.5.dylib */,
 				65B477B216B2CD5D004DBA9E /* UIKit.framework */,
 				65B477B416B2CD5D004DBA9E /* Foundation.framework */,
 				65B477B616B2CD5D004DBA9E /* CoreGraphics.framework */,
@@ -216,6 +231,9 @@
 			children = (
 				BA6B437A16C14F9500C440CA /* OVPatientDataHelper.h */,
 				BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */,
+				BA159BAA16C8ED6F00D15425 /* OVData.xcdatamodeld */,
+				BA159BAF16C8EEF000D15425 /* Patient.h */,
+				BA159BB016C8EEF000D15425 /* Patient.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -247,8 +265,12 @@
 		BA90CA2C16C1225D009EBEA9 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				BA159BB216C8F37600D15425 /* CoreDataTableViewController.h */,
+				BA159BB316C8F37600D15425 /* CoreDataTableViewController.m */,
 				BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */,
 				BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */,
+				BA159BB516C9387E00D15425 /* OVTableTextCell.h */,
+				BA159BB616C9387E00D15425 /* OVTableTextCell.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -385,6 +407,10 @@
 				BA6B438916C15E1600C440CA /* AMSlideTableCell.m in Sources */,
 				BA6B438A16C15E1600C440CA /* AMSlideTableHeader.m in Sources */,
 				BA6B439116C163CE00C440CA /* OVPatientDetailViewController.m in Sources */,
+				BA159BAC16C8ED6F00D15425 /* OVData.xcdatamodeld in Sources */,
+				BA159BB116C8EEF000D15425 /* Patient.m in Sources */,
+				BA159BB416C8F37600D15425 /* CoreDataTableViewController.m in Sources */,
+				BA159BB716C9387E00D15425 /* OVTableTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +540,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BA159BAA16C8ED6F00D15425 /* OVData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BA159BAB16C8ED6F00D15425 /* OVData.xcdatamodel */,
+			);
+			currentVersion = BA159BAB16C8ED6F00D15425 /* OVData.xcdatamodel */;
+			path = OVData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 65B477A516B2CD5D004DBA9E /* Project object */;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "OVPatientDataHelper.h"
+#import "AFHTTPClient.h"
 
 @implementation OVPatientDataHelper
 
@@ -27,10 +28,29 @@ static OVPatientDataHelper *sharedHelper;
     return [super alloc];
 }
 
--(void)loadData
+-(void)loadData:(void(^)())successBlock
 {
-    NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"patients" ofType:@"json"]];
-    self.patients = [NSJSONSerialization JSONObjectWithData:data options:NSJSONWritingPrettyPrinted error:nil];
+    //NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"patients" ofType:@"json"]];
+    //self.patients = [NSJSONSerialization JSONObjectWithData:data options:NSJSONWritingPrettyPrinted error:nil];
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost"]];
+   
+	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+    
+	[httpClient getPath:@"patients.json"
+              parameters:nil
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                     NSError* error;
+                     
+                     self.patients = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
+                     successBlock();
+                 }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                 }];
+    
+    
 }
 
 @end

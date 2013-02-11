@@ -7,10 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Patient.h"
 
-@interface OVPatientDetailViewController : UIViewController
+
+typedef enum {
+    kTypeNormal = 0,
+    kTypeTelephone
+} FieldType;
+
+
+@interface OVPatientDetailViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+{
+    float _tableHeight;
+    int _textIndex;
+}
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
-@property int patientId;
+@property (weak, nonatomic) Patient *patient;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *arrayTable;
 
 @end

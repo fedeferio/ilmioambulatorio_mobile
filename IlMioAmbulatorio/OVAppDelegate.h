@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) AMSlideOutNavigationController *slideOut;
+@property (strong, nonatomic) UIManagedDocument *dataDocument;
 
 -(void)userDidLogin;
 

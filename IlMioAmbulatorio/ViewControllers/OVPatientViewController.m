@@ -10,6 +10,8 @@
 #import "OVPatientCell.h"
 #import "OVPatientDataHelper.h"
 #import "OVPatientDetailViewController.h"
+#import "Patient.h"
+#import "OVAppDelegate.h"
 
 @interface OVPatientViewController ()
 
@@ -17,12 +19,38 @@
 
 @implementation OVPatientViewController
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+
+-(void)fetchPatientDataInDocument:(UIManagedDocument *)document
 {
-    if(self.isSearching)
-        return [self.filteredArray count];
-    
-    return [[OVPatientDataHelper sharedHelper].patients count];
+    [[OVPatientDataHelper sharedHelper] loadData:^{
+        for (NSDictionary *dictionary in [OVPatientDataHelper sharedHelper].patients)
+        {
+            Patient *patient = nil;
+            
+            NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Patient"];
+            request.predicate = [NSPredicate predicateWithFormat:@"cf = %@", dictionary[@"cf"]];
+            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"surname" ascending:YES];
+            
+            request.sortDescriptors = @[sortDescriptor];
+            
+            NSError *error = nil;
+            NSArray *match = [document.managedObjectContext executeFetchRequest:request error:&error];
+            
+            if(match && match.count == 0)
+            {
+                patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
+                                                        inManagedObjectContext:document.managedObjectContext];
+                patient.name = dictionary[@"name"];
+                patient.surname = dictionary[@"surname"];
+                patient.cf = dictionary[@"cf"];
+                patient.dateofBirth = [NSDate date];
+                patient.phone = dictionary[@"phone"];
+            }
+        }
+        
+        [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
+        
+    }];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -30,33 +58,25 @@
     OVPatientCell *cell = (OVPatientCell *)[self.tableView dequeueReusableCellWithIdentifier:@"OVPatientCell"];
     if(cell == nil)
         cell = [[OVPatientCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"OVPatientCell"];
-
-    NSDictionary *dictionary;
     
-    if(self.isSearching)
-        dictionary = self.filteredArray[indexPath.row];
-    else
-        dictionary = [OVPatientDataHelper sharedHelper].patients[indexPath.row];
+    Patient *patient = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    [cell.labelName setText:dictionary[@"name"]];
-    [cell.labelData setText:dictionary[@"birthDate"]];
-    [cell.labelCF setText:dictionary[@"cf"]];
-  
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    [cell.labelName setText:patient.name];
+    [cell.labelData setText:[dateFormatter stringFromDate:patient.dateofBirth]];
+    [cell.labelCF setText:patient.cf];
+    
     return cell;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-
-    NSDictionary *dictionary;
     
-    if(self.isSearching)
-        dictionary = self.filteredArray[path.row];
-    else
-        dictionary = [OVPatientDataHelper sharedHelper].patients[path.row];
-    
-    [((OVPatientDetailViewController *)segue.destinationViewController) setPatientId:[dictionary[@"id"] intValue]];
+    Patient *patient = [self.fetchedResultsController objectAtIndexPath:path];
+    [((OVPatientDetailViewController *)segue.destinationViewController) setPatient:patient];
 }
 
 - (void) searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
@@ -84,10 +104,35 @@
     return YES;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self setUpFetchedResultController];
+}
+
+-(void)setUpFetchedResultController
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Patient"];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"surname"
+                                                              ascending:YES
+                                                               selector:@selector(localizedCaseInsensitiveCompare:)]];
+    
+    UIManagedDocument* doc = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
+    
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                        managedObjectContext:doc.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    
+    [self fetchPatientDataInDocument:doc];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[OVPatientDataHelper sharedHelper] loadData];
+    
     self.filteredArray = [NSMutableArray array];
 	// Do any additional setup after loading the view.
 }

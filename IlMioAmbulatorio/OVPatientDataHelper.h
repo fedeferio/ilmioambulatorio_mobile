@@ -14,6 +14,6 @@
 
 +(OVPatientDataHelper *)sharedHelper;
 
--(void)loadData;
+-(void)loadData:(void(^)())successBlock;
 
 @end
