@@ -13,9 +13,6 @@
 		65B477BD16B2CD5D004DBA9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65B477BB16B2CD5D004DBA9E /* InfoPlist.strings */; };
 		65B477BF16B2CD5D004DBA9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477BE16B2CD5D004DBA9E /* main.m */; };
 		65B477C316B2CD5D004DBA9E /* OVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477C216B2CD5D004DBA9E /* OVAppDelegate.m */; };
-		65B477C516B2CD5D004DBA9E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B477C416B2CD5D004DBA9E /* Default.png */; };
-		65B477C716B2CD5D004DBA9E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B477C616B2CD5D004DBA9E /* Default@2x.png */; };
-		65B477C916B2CD5D004DBA9E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 65B477C816B2CD5D004DBA9E /* Default-568h@2x.png */; };
 		65B477CC16B2CD5D004DBA9E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B477CA16B2CD5D004DBA9E /* MainStoryboard_iPhone.storyboard */; };
 		65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B477CD16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard */; };
 		65B477D216B2CD5D004DBA9E /* OVMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B477D116B2CD5D004DBA9E /* OVMasterViewController.m */; };
@@ -26,6 +23,24 @@
 		BA159BB416C8F37600D15425 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB316C8F37600D15425 /* CoreDataTableViewController.m */; };
 		BA159BB716C9387E00D15425 /* OVTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB616C9387E00D15425 /* OVTableTextCell.m */; };
 		BA447A2D16C168F700F78030 /* apple.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BA447A2C16C168F700F78030 /* apple.jpeg */; };
+		BA5AB4D116D4143B006DA8E0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D016D4143B006DA8E0 /* Default.png */; };
+		BA5AB4D316D41448006DA8E0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D216D41448006DA8E0 /* Default@2x.png */; };
+		BA5AB4D516D4144E006DA8E0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D416D4144E006DA8E0 /* Default-568h@2x.png */; };
+		BA5AB4D716D4146A006DA8E0 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D616D4146A006DA8E0 /* Default-Portrait~ipad.png */; };
+		BA5AB4D916D41477006DA8E0 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D816D41477006DA8E0 /* Default-Portrait@2x~ipad.png */; };
+		BA5AB4DB16D41481006DA8E0 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4DA16D41481006DA8E0 /* Default-Landscape~ipad.png */; };
+		BA5AB4DD16D4148D006DA8E0 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4DC16D4148D006DA8E0 /* Default-Landscape@2x~ipad.png */; };
+		BA5AB4DF16D414FE006DA8E0 /* icona_app_iphone_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4DE16D414FE006DA8E0 /* icona_app_iphone_114x114.png */; };
+		BA5AB4E116D41507006DA8E0 /* icona_app_iphone_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4E016D41507006DA8E0 /* icona_app_iphone_72x72.png */; };
+		BA5AB4E516D617D1006DA8E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4E316D617D1006DA8E0 /* Localizable.strings */; };
+		BA5AB4E816D61BA5006DA8E0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AB4E716D61BA5006DA8E0 /* MBProgressHUD.m */; };
+		BA5AB4EC16D621DF006DA8E0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AB4EA16D621DF006DA8E0 /* EventKit.framework */; };
+		BA5AB4ED16D621DF006DA8E0 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5AB4EB16D621DF006DA8E0 /* EventKitUI.framework */; };
+		BA5AB4F316D6265E006DA8E0 /* OVEventDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AB4F216D6265D006DA8E0 /* OVEventDataHelper.m */; };
+		BA5AB4F616D628AB006DA8E0 /* OVEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AB4F516D628AB006DA8E0 /* OVEventViewController.m */; };
+		BA5AB4F916D62C23006DA8E0 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AB4F816D62C23006DA8E0 /* Event.m */; };
+		BA5AB4FC16D6300D006DA8E0 /* OVGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AB4FB16D6300D006DA8E0 /* OVGlobals.m */; };
+		BA5AB4FF16D6337E006DA8E0 /* OVEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA5AB4FE16D6337E006DA8E0 /* OVEventCell.m */; };
 		BA6B437816C14F5600C440CA /* patients.json in Resources */ = {isa = PBXBuildFile; fileRef = BA6B437716C14F5600C440CA /* patients.json */; };
 		BA6B437C16C14F9500C440CA /* OVPatientDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */; };
 		BA6B438816C15E1600C440CA /* AMSlideOutNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B438116C15E1600C440CA /* AMSlideOutNavigationController.m */; };
@@ -64,9 +79,6 @@
 		65B477C016B2CD5D004DBA9E /* IlMioAmbulatorio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IlMioAmbulatorio-Prefix.pch"; sourceTree = "<group>"; };
 		65B477C116B2CD5D004DBA9E /* OVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OVAppDelegate.h; sourceTree = "<group>"; };
 		65B477C216B2CD5D004DBA9E /* OVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OVAppDelegate.m; sourceTree = "<group>"; };
-		65B477C416B2CD5D004DBA9E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		65B477C616B2CD5D004DBA9E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		65B477C816B2CD5D004DBA9E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		65B477CB16B2CD5D004DBA9E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		65B477CE16B2CD5D004DBA9E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		65B477D016B2CD5D004DBA9E /* OVMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OVMasterViewController.h; sourceTree = "<group>"; };
@@ -82,6 +94,30 @@
 		BA159BB516C9387E00D15425 /* OVTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTableTextCell.h; sourceTree = "<group>"; };
 		BA159BB616C9387E00D15425 /* OVTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTableTextCell.m; sourceTree = "<group>"; };
 		BA447A2C16C168F700F78030 /* apple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple.jpeg; path = ../../../../Desktop/apple.jpeg; sourceTree = "<group>"; };
+		BA5AB4D016D4143B006DA8E0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		BA5AB4D216D41448006DA8E0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		BA5AB4D416D4144E006DA8E0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		BA5AB4D616D4146A006DA8E0 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		BA5AB4D816D41477006DA8E0 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		BA5AB4DA16D41481006DA8E0 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		BA5AB4DC16D4148D006DA8E0 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		BA5AB4DE16D414FE006DA8E0 /* icona_app_iphone_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icona_app_iphone_114x114.png; path = ../icona_app_iphone_114x114.png; sourceTree = "<group>"; };
+		BA5AB4E016D41507006DA8E0 /* icona_app_iphone_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icona_app_iphone_72x72.png; path = ../icona_app_iphone_72x72.png; sourceTree = "<group>"; };
+		BA5AB4E416D617D1006DA8E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = IlMioAmbulatorio/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BA5AB4E616D61BA5006DA8E0 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = ../MBProgressHUD.h; sourceTree = "<group>"; };
+		BA5AB4E716D61BA5006DA8E0 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../MBProgressHUD.m; sourceTree = "<group>"; };
+		BA5AB4EA16D621DF006DA8E0 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		BA5AB4EB16D621DF006DA8E0 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		BA5AB4F116D6265D006DA8E0 /* OVEventDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVEventDataHelper.h; sourceTree = "<group>"; };
+		BA5AB4F216D6265D006DA8E0 /* OVEventDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVEventDataHelper.m; sourceTree = "<group>"; };
+		BA5AB4F416D628AB006DA8E0 /* OVEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVEventViewController.h; path = ViewControllers/OVEventViewController.h; sourceTree = "<group>"; };
+		BA5AB4F516D628AB006DA8E0 /* OVEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVEventViewController.m; path = ViewControllers/OVEventViewController.m; sourceTree = "<group>"; };
+		BA5AB4F716D62C23006DA8E0 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		BA5AB4F816D62C23006DA8E0 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		BA5AB4FA16D6300D006DA8E0 /* OVGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVGlobals.h; sourceTree = "<group>"; };
+		BA5AB4FB16D6300D006DA8E0 /* OVGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVGlobals.m; sourceTree = "<group>"; };
+		BA5AB4FD16D6337E006DA8E0 /* OVEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVEventCell.h; sourceTree = "<group>"; };
+		BA5AB4FE16D6337E006DA8E0 /* OVEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVEventCell.m; sourceTree = "<group>"; };
 		BA6B437716C14F5600C440CA /* patients.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = patients.json; sourceTree = "<group>"; };
 		BA6B437A16C14F9500C440CA /* OVPatientDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVPatientDataHelper.h; sourceTree = "<group>"; };
 		BA6B437B16C14F9500C440CA /* OVPatientDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVPatientDataHelper.m; sourceTree = "<group>"; };
@@ -133,6 +169,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5AB4EC16D621DF006DA8E0 /* EventKit.framework in Frameworks */,
+				BA5AB4ED16D621DF006DA8E0 /* EventKitUI.framework in Frameworks */,
 				BA159BAE16C8EDFA00D15425 /* CoreData.framework in Frameworks */,
 				BA6B438E16C15E3600C440CA /* QuartzCore.framework in Frameworks */,
 				BABBD96F16B2D73B00291C08 /* CFNetwork.framework in Frameworks */,
@@ -151,6 +189,9 @@
 		65B477A316B2CD5D004DBA9E = {
 			isa = PBXGroup;
 			children = (
+				BA5AB4EA16D621DF006DA8E0 /* EventKit.framework */,
+				BA5AB4EB16D621DF006DA8E0 /* EventKitUI.framework */,
+				BA5AB4E216D6178F006DA8E0 /* Resources */,
 				65B477B816B2CD5D004DBA9E /* IlMioAmbulatorio */,
 				65B477B116B2CD5D004DBA9E /* Frameworks */,
 				65B477AF16B2CD5D004DBA9E /* Products */,
@@ -206,15 +247,38 @@
 		65B477B916B2CD5D004DBA9E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BA5AB4E016D41507006DA8E0 /* icona_app_iphone_72x72.png */,
+				BA5AB4DE16D414FE006DA8E0 /* icona_app_iphone_114x114.png */,
+				BA5AB4DC16D4148D006DA8E0 /* Default-Landscape@2x~ipad.png */,
+				BA5AB4DA16D41481006DA8E0 /* Default-Landscape~ipad.png */,
+				BA5AB4D816D41477006DA8E0 /* Default-Portrait@2x~ipad.png */,
+				BA5AB4D616D4146A006DA8E0 /* Default-Portrait~ipad.png */,
+				BA5AB4D416D4144E006DA8E0 /* Default-568h@2x.png */,
+				BA5AB4D216D41448006DA8E0 /* Default@2x.png */,
+				BA5AB4D016D4143B006DA8E0 /* Default.png */,
 				65B477BA16B2CD5D004DBA9E /* IlMioAmbulatorio-Info.plist */,
 				65B477BB16B2CD5D004DBA9E /* InfoPlist.strings */,
 				65B477BE16B2CD5D004DBA9E /* main.m */,
 				65B477C016B2CD5D004DBA9E /* IlMioAmbulatorio-Prefix.pch */,
-				65B477C416B2CD5D004DBA9E /* Default.png */,
-				65B477C616B2CD5D004DBA9E /* Default@2x.png */,
-				65B477C816B2CD5D004DBA9E /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA5AB4E216D6178F006DA8E0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA5AB4E316D617D1006DA8E0 /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BA5AB4E916D61BB4006DA8E0 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BA5AB4E616D61BA5006DA8E0 /* MBProgressHUD.h */,
+				BA5AB4E716D61BA5006DA8E0 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		BA6B437516C14E5D00C440CA /* Resources */ = {
@@ -234,6 +298,10 @@
 				BA159BAA16C8ED6F00D15425 /* OVData.xcdatamodeld */,
 				BA159BAF16C8EEF000D15425 /* Patient.h */,
 				BA159BB016C8EEF000D15425 /* Patient.m */,
+				BA5AB4F116D6265D006DA8E0 /* OVEventDataHelper.h */,
+				BA5AB4F216D6265D006DA8E0 /* OVEventDataHelper.m */,
+				BA5AB4F716D62C23006DA8E0 /* Event.h */,
+				BA5AB4F816D62C23006DA8E0 /* Event.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -241,6 +309,7 @@
 		BA6B437D16C15DF300C440CA /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				BA5AB4E916D61BB4006DA8E0 /* MBProgressHUD */,
 				BA6B437E16C15E1600C440CA /* AMSlideOut */,
 			);
 			name = Libs;
@@ -271,6 +340,10 @@
 				BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */,
 				BA159BB516C9387E00D15425 /* OVTableTextCell.h */,
 				BA159BB616C9387E00D15425 /* OVTableTextCell.m */,
+				BA5AB4FA16D6300D006DA8E0 /* OVGlobals.h */,
+				BA5AB4FB16D6300D006DA8E0 /* OVGlobals.m */,
+				BA5AB4FD16D6337E006DA8E0 /* OVEventCell.h */,
+				BA5AB4FE16D6337E006DA8E0 /* OVEventCell.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -284,6 +357,8 @@
 				BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */,
 				BA6B438F16C163CE00C440CA /* OVPatientDetailViewController.h */,
 				BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */,
+				BA5AB4F416D628AB006DA8E0 /* OVEventViewController.h */,
+				BA5AB4F516D628AB006DA8E0 /* OVEventViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -367,15 +442,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B477BD16B2CD5D004DBA9E /* InfoPlist.strings in Resources */,
-				65B477C516B2CD5D004DBA9E /* Default.png in Resources */,
-				65B477C716B2CD5D004DBA9E /* Default@2x.png in Resources */,
-				65B477C916B2CD5D004DBA9E /* Default-568h@2x.png in Resources */,
 				65B477CC16B2CD5D004DBA9E /* MainStoryboard_iPhone.storyboard in Resources */,
 				65B477CF16B2CD5D004DBA9E /* MainStoryboard_iPad.storyboard in Resources */,
 				BA6B437816C14F5600C440CA /* patients.json in Resources */,
 				BA6B438B16C15E1600C440CA /* iconSlide.png in Resources */,
 				BA6B438C16C15E1600C440CA /* iconSlide@2x.png in Resources */,
 				BA447A2D16C168F700F78030 /* apple.jpeg in Resources */,
+				BA5AB4D116D4143B006DA8E0 /* Default.png in Resources */,
+				BA5AB4D316D41448006DA8E0 /* Default@2x.png in Resources */,
+				BA5AB4D516D4144E006DA8E0 /* Default-568h@2x.png in Resources */,
+				BA5AB4D716D4146A006DA8E0 /* Default-Portrait~ipad.png in Resources */,
+				BA5AB4D916D41477006DA8E0 /* Default-Portrait@2x~ipad.png in Resources */,
+				BA5AB4DB16D41481006DA8E0 /* Default-Landscape~ipad.png in Resources */,
+				BA5AB4DD16D4148D006DA8E0 /* Default-Landscape@2x~ipad.png in Resources */,
+				BA5AB4DF16D414FE006DA8E0 /* icona_app_iphone_114x114.png in Resources */,
+				BA5AB4E116D41507006DA8E0 /* icona_app_iphone_72x72.png in Resources */,
+				BA5AB4E516D617D1006DA8E0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +493,12 @@
 				BA159BB116C8EEF000D15425 /* Patient.m in Sources */,
 				BA159BB416C8F37600D15425 /* CoreDataTableViewController.m in Sources */,
 				BA159BB716C9387E00D15425 /* OVTableTextCell.m in Sources */,
+				BA5AB4E816D61BA5006DA8E0 /* MBProgressHUD.m in Sources */,
+				BA5AB4F316D6265E006DA8E0 /* OVEventDataHelper.m in Sources */,
+				BA5AB4F616D628AB006DA8E0 /* OVEventViewController.m in Sources */,
+				BA5AB4F916D62C23006DA8E0 /* Event.m in Sources */,
+				BA5AB4FC16D6300D006DA8E0 /* OVGlobals.m in Sources */,
+				BA5AB4FF16D6337E006DA8E0 /* OVEventCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +527,14 @@
 				65B477CE16B2CD5D004DBA9E /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BA5AB4E316D617D1006DA8E0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA5AB4E416D617D1006DA8E0 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

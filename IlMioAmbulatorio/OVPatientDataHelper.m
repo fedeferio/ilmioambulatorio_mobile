@@ -30,14 +30,15 @@ static OVPatientDataHelper *sharedHelper;
 
 -(void)loadData:(void(^)())successBlock
 {
-    //NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"patients" ofType:@"json"]];
-    //self.patients = [NSJSONSerialization JSONObjectWithData:data options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *loginToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"loginToken"];
     
-    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost"]];
-   
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://ilmioambulatorio.dev/app_dev.php/"]];
+    [httpClient setDefaultHeader:@"x-wsse" value:loginToken];
+    
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
-	[httpClient getPath:@"patients.json"
+	[httpClient getPath:@"mobile/patients"
               parameters:nil
                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];

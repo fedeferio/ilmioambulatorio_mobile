@@ -22,11 +22,11 @@
                                         withTitle:@"Patients"
                                           andIcon:@""];
     
-//    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPatientViewController"];
-//    [self.slideOut addViewControllerToLastSection:controller
-//                                           tagged:1
-//                                        withTitle:@"Patients"
-//                                          andIcon:@""];
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVEventViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Events"
+                                          andIcon:@""];
     
     [self.window setRootViewController:self.slideOut];
     
