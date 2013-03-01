@@ -12,6 +12,7 @@
 #import "OVPatientDetailViewController.h"
 #import "Patient.h"
 #import "OVAppDelegate.h"
+#import "OVGlobals.h"
 
 @interface OVPatientViewController ()
 
@@ -20,38 +21,38 @@
 @implementation OVPatientViewController
 
 
--(void)fetchPatientDataInDocument:(UIManagedDocument *)document
-{
-    [[OVPatientDataHelper sharedHelper] loadData:^{
-        for (NSDictionary *dictionary in [OVPatientDataHelper sharedHelper].patients)
-        {
-            Patient *patient = nil;
-            
-            NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Patient"];
-            request.predicate = [NSPredicate predicateWithFormat:@"cf = %@", dictionary[@"cf"]];
-            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"surname" ascending:YES];
-            
-            request.sortDescriptors = @[sortDescriptor];
-            
-            NSError *error = nil;
-            NSArray *match = [document.managedObjectContext executeFetchRequest:request error:&error];
-            
-            if(match && match.count == 0)
-            {
-                patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
-                                                        inManagedObjectContext:document.managedObjectContext];
-                patient.name = dictionary[@"name"];
-                patient.surname = dictionary[@"surname"];
-                patient.cf = dictionary[@"cf"];
-                patient.dateofBirth = [NSDate date];
-                patient.phone = dictionary[@"phone"];
-            }
-        }
-        
-        [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
-        
-    }];
-}
+//-(void)fetchPatientDataInDocument:(UIManagedDocument *)document
+//{
+//    [[OVPatientDataHelper sharedHelper] loadData:^{
+//        for (NSDictionary *dictionary in [OVPatientDataHelper sharedHelper].patients)
+//        {
+//            Patient *patient = nil;
+//            
+//            NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Patient"];
+//            request.predicate = [NSPredicate predicateWithFormat:@"cf = %@", dictionary[@"cf"]];
+//            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"surname" ascending:YES];
+//            
+//            request.sortDescriptors = @[sortDescriptor];
+//            
+//            NSError *error = nil;
+//            NSArray *match = [document.managedObjectContext executeFetchRequest:request error:&error];
+//            
+//            if(match && match.count == 0)
+//            {
+//                patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
+//                                                        inManagedObjectContext:document.managedObjectContext];
+//                patient.name = dictionary[@"name"];
+//                patient.surname = dictionary[@"surname"];
+//                patient.cf = dictionary[@"cf"];
+//                patient.dateofBirth = [NSDate date];
+//                patient.phone = dictionary[@"phone"];
+//            }
+//        }
+//        
+//        [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
+//        
+//    }];
+//}
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -124,8 +125,10 @@
                                                                         managedObjectContext:doc.managedObjectContext
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
+
+    [self.tableView reloadData];
     
-    [self fetchPatientDataInDocument:doc];
+//    [self fetchPatientDataInDocument:doc];
     
 }
 
@@ -134,6 +137,13 @@
     [super viewDidLoad];
     
     self.filteredArray = [NSMutableArray array];
+    NSNotificationCenter *notifyCenter = [NSNotificationCenter defaultCenter];
+	[notifyCenter addObserverForName:kPatientFetchNotification
+							  object:nil
+							   queue:nil
+						  usingBlock:^(NSNotification* notification){
+                              [self.tableView reloadData];
+						  }];
 	// Do any additional setup after loading the view.
 }
 

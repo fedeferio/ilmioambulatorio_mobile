@@ -11,10 +11,11 @@
 @interface OVEventDataHelper : NSObject
 
 @property(strong, nonatomic) NSArray *events;
+@property (strong, nonatomic) EKEventStore* eventStore;
 
 +(OVEventDataHelper *)sharedHelper;
 
--(void)loadData:(void(^)())successBlock;
+-(void)loadData:(void(^)())successBlock inDocument:(UIManagedDocument *)document;
 
 
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "OVGlobals.h"
+#import "OVPatientDataHelper.h"
+#import "OVEventDataHelper.h"
+#import "OVPerformanceDataHelper.h"
 
 @implementation OVGlobals
 
@@ -20,6 +23,19 @@
     NSDate* date = [formatter dateFromString:string];
     
     return date;
+}
+
++(void)updateAll:(UIManagedDocument*) document{
+    
+    // Load Patients data
+    [[OVPatientDataHelper sharedHelper] loadData:nil inDocument:document];
+    
+    // Load Events data
+    [[OVEventDataHelper sharedHelper] loadData:nil inDocument:document];
+
+    // Load Performance data
+    [[OVPerformanceDataHelper sharedHelper] loadData:nil inDocument:document];
+
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "OVAppDelegate.h"
 #import "AMSlideOutNavigationController.h"
+#import "OVGlobals.h"
 
 @implementation OVAppDelegate
 
@@ -15,18 +16,27 @@
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
     self.slideOut = [AMSlideOutNavigationController slideOutNavigation];
-    UIViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPatientViewController"];
+    UIViewController *controller = nil;
+    
     [self.slideOut addSectionWithTitle:@"Menu"];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVHomeViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Home"
+                                          andIcon:@"iconHome.png"];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPatientViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
                                         withTitle:@"Patients"
-                                          andIcon:@""];
+                                          andIcon:@"iconPatients"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVEventViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
                                         withTitle:@"Events"
-                                          andIcon:@""];
+                                          andIcon:@"iconEvent"];
     
     [self.window setRootViewController:self.slideOut];
     
@@ -35,6 +45,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    EKEventStore* eventStore = [[EKEventStore alloc] init];
+    [eventStore requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error) {
+        [[NSUserDefaults standardUserDefaults] setBool:granted forKey:kDefaultsGranted];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }];
     
     NSURL *url = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     url = [url URLByAppendingPathComponent:@"OVData"];

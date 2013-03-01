@@ -50,6 +50,10 @@
 		BA6B438C16C15E1600C440CA /* iconSlide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA6B438716C15E1600C440CA /* iconSlide@2x.png */; };
 		BA6B438E16C15E3600C440CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6B438D16C15E3600C440CA /* QuartzCore.framework */; };
 		BA6B439116C163CE00C440CA /* OVPatientDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */; };
+		BA8CF26716E0F45A0040677A /* iconEvent.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26316E0F4590040677A /* iconEvent.png */; };
+		BA8CF26816E0F45A0040677A /* iconEvent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26416E0F4590040677A /* iconEvent@2x.png */; };
+		BA8CF26916E0F45A0040677A /* iconPatients.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26516E0F4590040677A /* iconPatients.png */; };
+		BA8CF26A16E0F45A0040677A /* iconPatients@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26616E0F45A0040677A /* iconPatients@2x.png */; };
 		BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */; };
 		BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */; };
 		BABBD94A16B2D46900291C08 /* OVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94916B2D46900291C08 /* OVLoginViewController.m */; };
@@ -66,6 +70,11 @@
 		BABBD96B16B2D72B00291C08 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */; };
 		BABBD96D16B2D73100291C08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */; };
 		BABBD96F16B2D73B00291C08 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABBD96E16B2D73B00291C08 /* CFNetwork.framework */; };
+		BACA8DBB16E0A70B00C7F05C /* OVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA8DBA16E0A70B00C7F05C /* OVHomeViewController.m */; };
+		BACA8DBE16E0AB7300C7F05C /* Performance.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA8DBD16E0AB7300C7F05C /* Performance.m */; };
+		BACA8DC116E0AFD200C7F05C /* OVPerformanceDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA8DC016E0AFD200C7F05C /* OVPerformanceDataHelper.m */; };
+		BACA8DC516E0BC8E00C7F05C /* iconHome.png in Resources */ = {isa = PBXBuildFile; fileRef = BACA8DC316E0BC8E00C7F05C /* iconHome.png */; };
+		BACA8DC616E0BC8E00C7F05C /* iconHome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BACA8DC416E0BC8E00C7F05C /* iconHome@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +142,10 @@
 		BA6B438D16C15E3600C440CA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BA6B438F16C163CE00C440CA /* OVPatientDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientDetailViewController.h; path = ViewControllers/OVPatientDetailViewController.h; sourceTree = "<group>"; };
 		BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientDetailViewController.m; path = ViewControllers/OVPatientDetailViewController.m; sourceTree = "<group>"; };
+		BA8CF26316E0F4590040677A /* iconEvent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconEvent.png; sourceTree = "<group>"; };
+		BA8CF26416E0F4590040677A /* iconEvent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconEvent@2x.png"; sourceTree = "<group>"; };
+		BA8CF26516E0F4590040677A /* iconPatients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconPatients.png; sourceTree = "<group>"; };
+		BA8CF26616E0F45A0040677A /* iconPatients@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconPatients@2x.png"; sourceTree = "<group>"; };
 		BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientViewController.h; path = ViewControllers/OVPatientViewController.h; sourceTree = "<group>"; };
 		BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientViewController.m; path = ViewControllers/OVPatientViewController.m; sourceTree = "<group>"; };
 		BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientCell.h; path = Support/OVPatientCell.h; sourceTree = "<group>"; };
@@ -162,6 +175,14 @@
 		BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BABBD96E16B2D73B00291C08 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BACA8DB916E0A70B00C7F05C /* OVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVHomeViewController.h; sourceTree = "<group>"; };
+		BACA8DBA16E0A70B00C7F05C /* OVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVHomeViewController.m; sourceTree = "<group>"; };
+		BACA8DBC16E0AB7300C7F05C /* Performance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Performance.h; sourceTree = "<group>"; };
+		BACA8DBD16E0AB7300C7F05C /* Performance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Performance.m; sourceTree = "<group>"; };
+		BACA8DBF16E0AFD200C7F05C /* OVPerformanceDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVPerformanceDataHelper.h; sourceTree = "<group>"; };
+		BACA8DC016E0AFD200C7F05C /* OVPerformanceDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVPerformanceDataHelper.m; sourceTree = "<group>"; };
+		BACA8DC316E0BC8E00C7F05C /* iconHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconHome.png; sourceTree = "<group>"; };
+		BACA8DC416E0BC8E00C7F05C /* iconHome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconHome@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +305,7 @@
 		BA6B437516C14E5D00C440CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BACA8DC216E0BC7900C7F05C /* Images */,
 				BA447A2C16C168F700F78030 /* apple.jpeg */,
 				BA6B437716C14F5600C440CA /* patients.json */,
 			);
@@ -302,6 +324,10 @@
 				BA5AB4F216D6265D006DA8E0 /* OVEventDataHelper.m */,
 				BA5AB4F716D62C23006DA8E0 /* Event.h */,
 				BA5AB4F816D62C23006DA8E0 /* Event.m */,
+				BACA8DBC16E0AB7300C7F05C /* Performance.h */,
+				BACA8DBD16E0AB7300C7F05C /* Performance.m */,
+				BACA8DBF16E0AFD200C7F05C /* OVPerformanceDataHelper.h */,
+				BACA8DC016E0AFD200C7F05C /* OVPerformanceDataHelper.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -359,6 +385,8 @@
 				BA6B439016C163CE00C440CA /* OVPatientDetailViewController.m */,
 				BA5AB4F416D628AB006DA8E0 /* OVEventViewController.h */,
 				BA5AB4F516D628AB006DA8E0 /* OVEventViewController.m */,
+				BACA8DB916E0A70B00C7F05C /* OVHomeViewController.h */,
+				BACA8DBA16E0A70B00C7F05C /* OVHomeViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -387,6 +415,19 @@
 				BABBD95E16B2D62700291C08 /* UIImageView+AFNetworking.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		BACA8DC216E0BC7900C7F05C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BA8CF26316E0F4590040677A /* iconEvent.png */,
+				BA8CF26416E0F4590040677A /* iconEvent@2x.png */,
+				BA8CF26516E0F4590040677A /* iconPatients.png */,
+				BA8CF26616E0F45A0040677A /* iconPatients@2x.png */,
+				BACA8DC316E0BC8E00C7F05C /* iconHome.png */,
+				BACA8DC416E0BC8E00C7F05C /* iconHome@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +499,12 @@
 				BA5AB4DF16D414FE006DA8E0 /* icona_app_iphone_114x114.png in Resources */,
 				BA5AB4E116D41507006DA8E0 /* icona_app_iphone_72x72.png in Resources */,
 				BA5AB4E516D617D1006DA8E0 /* Localizable.strings in Resources */,
+				BACA8DC516E0BC8E00C7F05C /* iconHome.png in Resources */,
+				BACA8DC616E0BC8E00C7F05C /* iconHome@2x.png in Resources */,
+				BA8CF26716E0F45A0040677A /* iconEvent.png in Resources */,
+				BA8CF26816E0F45A0040677A /* iconEvent@2x.png in Resources */,
+				BA8CF26916E0F45A0040677A /* iconPatients.png in Resources */,
+				BA8CF26A16E0F45A0040677A /* iconPatients@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +546,9 @@
 				BA5AB4F916D62C23006DA8E0 /* Event.m in Sources */,
 				BA5AB4FC16D6300D006DA8E0 /* OVGlobals.m in Sources */,
 				BA5AB4FF16D6337E006DA8E0 /* OVEventCell.m in Sources */,
+				BACA8DBB16E0A70B00C7F05C /* OVHomeViewController.m in Sources */,
+				BACA8DBE16E0AB7300C7F05C /* Performance.m in Sources */,
+				BACA8DC116E0AFD200C7F05C /* OVPerformanceDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@
 #import "OVLoginViewController.h"
 #import "AFHTTPClient.h"
 #import "OVAppDelegate.h"
+#import "OVGlobals.h"
 
 @interface OVLoginViewController ()
 
@@ -42,7 +43,7 @@
     //TODO:
     [((OVAppDelegate*) [UIApplication sharedApplication].delegate) userDidLogin];
 
-	AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://ilmioambulatorio.dev/app_dev.php/"]];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kURLBase]];
 	
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     
@@ -56,6 +57,11 @@
                      
                      id jResult = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
                      [[NSUserDefaults standardUserDefaults] setObject:jResult[@"WSSE"] forKey:@"loginToken"];
+                     
+                     // Load user data
+                     UIManagedDocument* doc = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
+                     [OVGlobals updateAll:doc];
+                     
                      [((OVAppDelegate*) [UIApplication sharedApplication].delegate) userDidLogin];
                      
                      [self.progressHUD hide:YES];

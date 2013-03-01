@@ -13,18 +13,6 @@
 
 @implementation CoreDataTableViewController
 
-#pragma mark - Properties
-
-@synthesize fetchedResultsController = _fetchedResultsController;
-@synthesize suspendAutomaticTrackingOfChangesInManagedObjectContext = _suspendAutomaticTrackingOfChangesInManagedObjectContext;
-@synthesize debug = _debug;
-@synthesize beganUpdates = _beganUpdates;
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
 #pragma mark - Fetching
 
 - (void)performFetch

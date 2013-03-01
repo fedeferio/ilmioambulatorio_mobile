@@ -14,6 +14,6 @@
 
 +(OVPatientDataHelper *)sharedHelper;
 
--(void)loadData:(void(^)())successBlock;
+-(void)loadData:(void(^)())successBlock inDocument:(UIManagedDocument *)document;
 
 @end

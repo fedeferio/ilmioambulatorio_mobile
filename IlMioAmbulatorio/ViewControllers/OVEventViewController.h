@@ -7,14 +7,11 @@
 //
 
 #import "CoreDataTableViewController.h"
-#import <EventKit/EventKit.h>
-#import <EventKitUI/EventKitUI.h>
 
 @class Event;
 
 @interface OVEventViewController : CoreDataTableViewController<EKEventViewDelegate>
 
-@property (strong, nonatomic) EKEventStore* eventStore;
 @property (strong, nonatomic) EKEventViewController *eventController;
 @property (strong, nonatomic) Event* ekEvent;
 

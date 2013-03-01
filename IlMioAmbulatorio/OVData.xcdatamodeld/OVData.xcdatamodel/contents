@@ -16,8 +16,13 @@
         <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Performance" representedClassName="Performance" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Patient" positionX="160" positionY="192" width="128" height="135"/>
         <element name="Event" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Patient" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Performance" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>
