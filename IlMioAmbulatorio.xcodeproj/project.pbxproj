@@ -54,6 +54,7 @@
 		BA8CF26816E0F45A0040677A /* iconEvent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26416E0F4590040677A /* iconEvent@2x.png */; };
 		BA8CF26916E0F45A0040677A /* iconPatients.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26516E0F4590040677A /* iconPatients.png */; };
 		BA8CF26A16E0F45A0040677A /* iconPatients@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26616E0F45A0040677A /* iconPatients@2x.png */; };
+		BA8CF26D16E650130040677A /* NSManagedObject+RXCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CF26C16E650130040677A /* NSManagedObject+RXCopying.m */; };
 		BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */; };
 		BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */; };
 		BABBD94A16B2D46900291C08 /* OVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94916B2D46900291C08 /* OVLoginViewController.m */; };
@@ -146,6 +147,8 @@
 		BA8CF26416E0F4590040677A /* iconEvent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconEvent@2x.png"; sourceTree = "<group>"; };
 		BA8CF26516E0F4590040677A /* iconPatients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconPatients.png; sourceTree = "<group>"; };
 		BA8CF26616E0F45A0040677A /* iconPatients@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconPatients@2x.png"; sourceTree = "<group>"; };
+		BA8CF26B16E650130040677A /* NSManagedObject+RXCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+RXCopying.h"; sourceTree = "<group>"; };
+		BA8CF26C16E650130040677A /* NSManagedObject+RXCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+RXCopying.m"; sourceTree = "<group>"; };
 		BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientViewController.h; path = ViewControllers/OVPatientViewController.h; sourceTree = "<group>"; };
 		BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientViewController.m; path = ViewControllers/OVPatientViewController.m; sourceTree = "<group>"; };
 		BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientCell.h; path = Support/OVPatientCell.h; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 			children = (
 				BA5AB4E916D61BB4006DA8E0 /* MBProgressHUD */,
 				BA6B437E16C15E1600C440CA /* AMSlideOut */,
+				BA8CF26B16E650130040677A /* NSManagedObject+RXCopying.h */,
+				BA8CF26C16E650130040677A /* NSManagedObject+RXCopying.m */,
 			);
 			name = Libs;
 			sourceTree = "<group>";
@@ -549,6 +554,7 @@
 				BACA8DBB16E0A70B00C7F05C /* OVHomeViewController.m in Sources */,
 				BACA8DBE16E0AB7300C7F05C /* Performance.m in Sources */,
 				BACA8DC116E0AFD200C7F05C /* OVPerformanceDataHelper.m in Sources */,
+				BA8CF26D16E650130040677A /* NSManagedObject+RXCopying.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

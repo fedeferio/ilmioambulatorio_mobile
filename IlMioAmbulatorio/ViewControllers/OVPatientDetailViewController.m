@@ -22,11 +22,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // Store data in temp structure
+    NSArray *keys = [[[self.patient entity] attributesByName] allKeys];
+    self.patientTemp = [self.patient dictionaryWithValuesForKeys:keys];
+    
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Salva"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self
                                                                  action:@selector(saveFields)];
     self.navigationItem.rightBarButtonItem = barButton;
+    self.navigationItem.hidesBackButton = YES;
+    barButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+                                                 style:UIBarButtonItemStylePlain
+                                                target:self
+                                                action:@selector(goBack)];
+    self.navigationItem.leftBarButtonItem = barButton;
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:)
@@ -37,6 +47,16 @@
     [self.labelName setText:self.patient.name];
     //[self.imageView setImage:[UIImage imageNamed:patient[@"image"]]];
     
+    if(self.patient.image != nil && ![self.patient.image isEqualToString:@""])
+    {
+        NSData* imgData = [NSData dataWithContentsOfFile:self.patient.image];
+        UIImage *image = [UIImage imageWithData:imgData];
+        
+        [self.buttonImage setImage:image forState:UIControlStateNormal];
+        self.path = [NSMutableString stringWithString:self.patient.image];
+        
+    }
+    
     self.arrayTable = @[
                         @{@"label": @"Name", @"placeholder": @"Name", @"tag": @(1), @"type":@(kTypeNormal), @"field":@"name"},
                         @{@"label": @"Surname", @"placeholder": @"Surname", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"surname"},
@@ -45,13 +65,47 @@
     
 }
 
+- (void)goBack
+{
+    if(_didEdit)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Attenzione"
+                                                            message:@"Hai effettuato delle modifiche. Vuoi uscire dalla pagina?"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"No"
+                                                  otherButtonTitles:@"Sì", nil];
+        [alertView show];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (self.currentTextField) {
+        [self.currentTextField resignFirstResponder];
+    }
+    if(buttonIndex > 0)
+    {
+        [self.patient setValuesForKeysWithDictionary:self.patientTemp];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
 - (void)saveFields
 {
+    if (self.currentTextField) {
+        [self.currentTextField resignFirstResponder];
+    }
+    
+    [self.patient setImage:self.path];
+    
     UIManagedDocument* document = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
     [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
-//    NSLog(@"%@", document.fileURL);
-    
-    
+    _didEdit = NO;
+    // Store data in temp structure
+    NSArray *keys = [[[self.patient entity] attributesByName] allKeys];
+    self.patientTemp = [self.patient dictionaryWithValuesForKeys:keys];
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification
@@ -96,6 +150,7 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    self.currentTextField = textField;
     _textIndex = textField.tag;
     [self scrollToRow];
 }
@@ -140,12 +195,103 @@
     
 }
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    _didEdit = YES;
+    return YES;
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
 
+- (IBAction)buttonImageClick:(id)sender {
+    
+    if(self.actionSheet == nil)
+    {
+        self.actionSheet = [[UIActionSheet alloc] initWithTitle:@"Seleziona immagine"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Annulla"
+                                         destructiveButtonTitle:@"Cancella"
+                                              otherButtonTitles:@"Libreria",@"Fotocamera", nil];
+    }
+    
+    
+    [self.actionSheet showInView:self.view];
+
+}
+
+-(void) actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+        {
+            self.path = nil;
+            [self.buttonImage setImage:nil forState:UIControlStateNormal];
+            break;
+        }
+        case 1:
+        {
+            [self openLibraryPicker];
+            break;
+        }
+        case 2:
+        {
+            [self openImagePicker];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)openLibraryPicker
+{
+	self.picker = [[UIImagePickerController alloc] init];
+	self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+	self.picker.allowsEditing = YES;
+	self.picker.mediaTypes = [NSArray arrayWithObjects:(NSString*)kUTTypeImage, nil];
+	[self.picker setDelegate:self];
+    
+    [self presentViewController:self.picker animated:YES completion:^{}];
+}
+
+- (void)openImagePicker
+{
+	self.picker = [[UIImagePickerController alloc] init];
+    [self.picker setDelegate:self];
+	self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	self.picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+	self.picker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+	self.picker.showsCameraControls = YES;
+	self.picker.navigationBarHidden = YES;
+    self.picker.allowsEditing = YES;
+	self.picker.toolbarHidden = YES;
+	self.picker.wantsFullScreenLayout = YES;
+    
+    [self presentViewController:self.picker animated:YES completion:^{}];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
+    if (image) {
+        [self.buttonImage setImage:image forState:UIControlStateNormal];
+        NSData* imageData = UIImageJPEGRepresentation(image, 0.7);
+        self.path = [NSMutableString stringWithString:[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"imgPatient"]];
+        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy-MM-dd-hh-mm-ss"];
+        [self.path appendFormat:@"%@.jpeg", [formatter stringFromDate:[NSDate date]]];
+        
+        [imageData writeToFile:self.path atomically:YES];
+        _didEdit = YES;
+    }
+    
+    [self.picker dismissViewControllerAnimated:YES completion:^{}];
+	
+}
 
 
 @end

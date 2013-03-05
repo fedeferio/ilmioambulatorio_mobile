@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#define kURLBase @"http://ilmioambulatorio.dev/app_dev.php/"
-//#define kURLBase @"http://webapp.ilmioambulatorio.it/app_dev.php/"
+//#define kURLBase @"http://ilmioambulatorio.dev/app_dev.php/"
+#define kURLBase @"http://webapp.ilmioambulatorio.it/app_dev.php/"
 
 #define kPatientFetchNotification @"kPatientFetchNotification"
 #define kPerformanceFetchNotification @"kPerformanceFetchNotification"
