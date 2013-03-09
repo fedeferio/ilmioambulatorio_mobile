@@ -10,6 +10,8 @@
 #import "OVPatientDataHelper.h"
 #import "OVEventDataHelper.h"
 #import "OVPerformanceDataHelper.h"
+#import "OVTeamDataHelper.h"
+#import "OVReportDataHelper.h"
 
 @implementation OVGlobals
 
@@ -35,6 +37,12 @@
 
     // Load Performance data
     [[OVPerformanceDataHelper sharedHelper] loadData:nil inDocument:document];
+    
+    // Load Team data
+    [[OVTeamDataHelper sharedHelper] loadData:nil inDocument:document];
+    
+    // Load Report data
+    [[OVReportDataHelper sharedHelper] loadData:nil inDocument:document];
 
 }
 

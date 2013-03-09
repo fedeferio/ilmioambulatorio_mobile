@@ -22,6 +22,21 @@
 		BA159BB116C8EEF000D15425 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB016C8EEF000D15425 /* Patient.m */; };
 		BA159BB416C8F37600D15425 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB316C8F37600D15425 /* CoreDataTableViewController.m */; };
 		BA159BB716C9387E00D15425 /* OVTableTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA159BB616C9387E00D15425 /* OVTableTextCell.m */; };
+		BA2AA49316E9E16A00199370 /* Team.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA49216E9E16A00199370 /* Team.m */; };
+		BA2AA49616E9E17D00199370 /* TeamMember.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA49516E9E17D00199370 /* TeamMember.m */; };
+		BA2AA49916E9E78300199370 /* iconGroup.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2AA49716E9E78300199370 /* iconGroup.png */; };
+		BA2AA49A16E9E78300199370 /* iconGroup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2AA49816E9E78300199370 /* iconGroup@2x.png */; };
+		BA2AA49D16E9E7F200199370 /* OVTeamMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA49C16E9E7F200199370 /* OVTeamMembersViewController.m */; };
+		BA2AA4A916E9F65200199370 /* OVReportDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4A816E9F65100199370 /* OVReportDataHelper.m */; };
+		BA2AA4AC16E9F9D200199370 /* OVReportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4AB16E9F9D200199370 /* OVReportViewController.m */; };
+		BA2AA4AF16EA29E100199370 /* iconFolder.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2AA4AD16EA29E100199370 /* iconFolder.png */; };
+		BA2AA4B016EA29E100199370 /* iconFolder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA2AA4AE16EA29E100199370 /* iconFolder@2x.png */; };
+		BA2AA4B916EA349B00199370 /* Report.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4B816EA349A00199370 /* Report.m */; };
+		BA2AA4BC16EA349C00199370 /* ReportField.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4BB16EA349C00199370 /* ReportField.m */; };
+		BA2AA4BF16EA351700199370 /* OVReportDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4BE16EA351700199370 /* OVReportDetailViewController.m */; };
+		BA2AA4C216EA3C0900199370 /* OVReportTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4C116EA3C0900199370 /* OVReportTextCell.m */; };
+		BA2AA4CA16EA456500199370 /* GradientButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4C916EA455900199370 /* GradientButton.m */; };
+		BA2AA4CB16EA456A00199370 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = BA2AA4C716EA455900199370 /* Common.m */; };
 		BA447A2D16C168F700F78030 /* apple.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BA447A2C16C168F700F78030 /* apple.jpeg */; };
 		BA5AB4D116D4143B006DA8E0 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D016D4143B006DA8E0 /* Default.png */; };
 		BA5AB4D316D41448006DA8E0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA5AB4D216D41448006DA8E0 /* Default@2x.png */; };
@@ -55,6 +70,8 @@
 		BA8CF26916E0F45A0040677A /* iconPatients.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26516E0F4590040677A /* iconPatients.png */; };
 		BA8CF26A16E0F45A0040677A /* iconPatients@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8CF26616E0F45A0040677A /* iconPatients@2x.png */; };
 		BA8CF26D16E650130040677A /* NSManagedObject+RXCopying.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CF26C16E650130040677A /* NSManagedObject+RXCopying.m */; };
+		BA8CF27316E6AE9F0040677A /* OVTeamDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CF27216E6AE9F0040677A /* OVTeamDataHelper.m */; };
+		BA8CF27616E6B06A0040677A /* OVTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CF27516E6B06A0040677A /* OVTeamViewController.m */; };
 		BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */; };
 		BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */; };
 		BABBD94A16B2D46900291C08 /* OVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94916B2D46900291C08 /* OVLoginViewController.m */; };
@@ -103,6 +120,32 @@
 		BA159BB316C8F37600D15425 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ../CoreDataTableViewController.m; sourceTree = "<group>"; };
 		BA159BB516C9387E00D15425 /* OVTableTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTableTextCell.h; sourceTree = "<group>"; };
 		BA159BB616C9387E00D15425 /* OVTableTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTableTextCell.m; sourceTree = "<group>"; };
+		BA2AA49116E9E16A00199370 /* Team.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Team.h; sourceTree = "<group>"; };
+		BA2AA49216E9E16A00199370 /* Team.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Team.m; sourceTree = "<group>"; };
+		BA2AA49416E9E17D00199370 /* TeamMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMember.h; sourceTree = "<group>"; };
+		BA2AA49516E9E17D00199370 /* TeamMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMember.m; sourceTree = "<group>"; };
+		BA2AA49716E9E78300199370 /* iconGroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconGroup.png; sourceTree = "<group>"; };
+		BA2AA49816E9E78300199370 /* iconGroup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconGroup@2x.png"; sourceTree = "<group>"; };
+		BA2AA49B16E9E7F200199370 /* OVTeamMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTeamMembersViewController.h; sourceTree = "<group>"; };
+		BA2AA49C16E9E7F200199370 /* OVTeamMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTeamMembersViewController.m; sourceTree = "<group>"; };
+		BA2AA4A716E9F65100199370 /* OVReportDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVReportDataHelper.h; sourceTree = "<group>"; };
+		BA2AA4A816E9F65100199370 /* OVReportDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVReportDataHelper.m; sourceTree = "<group>"; };
+		BA2AA4AA16E9F9D200199370 /* OVReportViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVReportViewController.h; sourceTree = "<group>"; };
+		BA2AA4AB16E9F9D200199370 /* OVReportViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVReportViewController.m; sourceTree = "<group>"; };
+		BA2AA4AD16EA29E100199370 /* iconFolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconFolder.png; sourceTree = "<group>"; };
+		BA2AA4AE16EA29E100199370 /* iconFolder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconFolder@2x.png"; sourceTree = "<group>"; };
+		BA2AA4B716EA349A00199370 /* Report.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Report.h; sourceTree = "<group>"; };
+		BA2AA4B816EA349A00199370 /* Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Report.m; sourceTree = "<group>"; };
+		BA2AA4BA16EA349B00199370 /* ReportField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportField.h; sourceTree = "<group>"; };
+		BA2AA4BB16EA349C00199370 /* ReportField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportField.m; sourceTree = "<group>"; };
+		BA2AA4BD16EA351600199370 /* OVReportDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVReportDetailViewController.h; sourceTree = "<group>"; };
+		BA2AA4BE16EA351700199370 /* OVReportDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVReportDetailViewController.m; sourceTree = "<group>"; };
+		BA2AA4C016EA3C0900199370 /* OVReportTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVReportTextCell.h; sourceTree = "<group>"; };
+		BA2AA4C116EA3C0900199370 /* OVReportTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVReportTextCell.m; sourceTree = "<group>"; };
+		BA2AA4C616EA455900199370 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		BA2AA4C716EA455900199370 /* Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		BA2AA4C816EA455900199370 /* GradientButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientButton.h; sourceTree = "<group>"; };
+		BA2AA4C916EA455900199370 /* GradientButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientButton.m; sourceTree = "<group>"; };
 		BA447A2C16C168F700F78030 /* apple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = apple.jpeg; path = ../../../../Desktop/apple.jpeg; sourceTree = "<group>"; };
 		BA5AB4D016D4143B006DA8E0 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		BA5AB4D216D41448006DA8E0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
@@ -149,6 +192,10 @@
 		BA8CF26616E0F45A0040677A /* iconPatients@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconPatients@2x.png"; sourceTree = "<group>"; };
 		BA8CF26B16E650130040677A /* NSManagedObject+RXCopying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+RXCopying.h"; sourceTree = "<group>"; };
 		BA8CF26C16E650130040677A /* NSManagedObject+RXCopying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+RXCopying.m"; sourceTree = "<group>"; };
+		BA8CF27116E6AE9F0040677A /* OVTeamDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTeamDataHelper.h; sourceTree = "<group>"; };
+		BA8CF27216E6AE9F0040677A /* OVTeamDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTeamDataHelper.m; sourceTree = "<group>"; };
+		BA8CF27416E6B0690040677A /* OVTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVTeamViewController.h; sourceTree = "<group>"; };
+		BA8CF27516E6B06A0040677A /* OVTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVTeamViewController.m; sourceTree = "<group>"; };
 		BA90CA2816C1201F009EBEA9 /* OVPatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientViewController.h; path = ViewControllers/OVPatientViewController.h; sourceTree = "<group>"; };
 		BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientViewController.m; path = ViewControllers/OVPatientViewController.m; sourceTree = "<group>"; };
 		BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientCell.h; path = Support/OVPatientCell.h; sourceTree = "<group>"; };
@@ -331,6 +378,18 @@
 				BACA8DBD16E0AB7300C7F05C /* Performance.m */,
 				BACA8DBF16E0AFD200C7F05C /* OVPerformanceDataHelper.h */,
 				BACA8DC016E0AFD200C7F05C /* OVPerformanceDataHelper.m */,
+				BA8CF27116E6AE9F0040677A /* OVTeamDataHelper.h */,
+				BA8CF27216E6AE9F0040677A /* OVTeamDataHelper.m */,
+				BA2AA49116E9E16A00199370 /* Team.h */,
+				BA2AA49216E9E16A00199370 /* Team.m */,
+				BA2AA49416E9E17D00199370 /* TeamMember.h */,
+				BA2AA49516E9E17D00199370 /* TeamMember.m */,
+				BA2AA4A716E9F65100199370 /* OVReportDataHelper.h */,
+				BA2AA4A816E9F65100199370 /* OVReportDataHelper.m */,
+				BA2AA4BA16EA349B00199370 /* ReportField.h */,
+				BA2AA4BB16EA349C00199370 /* ReportField.m */,
+				BA2AA4B716EA349A00199370 /* Report.h */,
+				BA2AA4B816EA349A00199370 /* Report.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -338,6 +397,10 @@
 		BA6B437D16C15DF300C440CA /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				BA2AA4C616EA455900199370 /* Common.h */,
+				BA2AA4C716EA455900199370 /* Common.m */,
+				BA2AA4C816EA455900199370 /* GradientButton.h */,
+				BA2AA4C916EA455900199370 /* GradientButton.m */,
 				BA5AB4E916D61BB4006DA8E0 /* MBProgressHUD */,
 				BA6B437E16C15E1600C440CA /* AMSlideOut */,
 				BA8CF26B16E650130040677A /* NSManagedObject+RXCopying.h */,
@@ -375,6 +438,8 @@
 				BA5AB4FB16D6300D006DA8E0 /* OVGlobals.m */,
 				BA5AB4FD16D6337E006DA8E0 /* OVEventCell.h */,
 				BA5AB4FE16D6337E006DA8E0 /* OVEventCell.m */,
+				BA2AA4C016EA3C0900199370 /* OVReportTextCell.h */,
+				BA2AA4C116EA3C0900199370 /* OVReportTextCell.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -392,6 +457,14 @@
 				BA5AB4F516D628AB006DA8E0 /* OVEventViewController.m */,
 				BACA8DB916E0A70B00C7F05C /* OVHomeViewController.h */,
 				BACA8DBA16E0A70B00C7F05C /* OVHomeViewController.m */,
+				BA8CF27416E6B0690040677A /* OVTeamViewController.h */,
+				BA8CF27516E6B06A0040677A /* OVTeamViewController.m */,
+				BA2AA49B16E9E7F200199370 /* OVTeamMembersViewController.h */,
+				BA2AA49C16E9E7F200199370 /* OVTeamMembersViewController.m */,
+				BA2AA4AA16E9F9D200199370 /* OVReportViewController.h */,
+				BA2AA4AB16E9F9D200199370 /* OVReportViewController.m */,
+				BA2AA4BD16EA351600199370 /* OVReportDetailViewController.h */,
+				BA2AA4BE16EA351700199370 /* OVReportDetailViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -425,6 +498,10 @@
 		BACA8DC216E0BC7900C7F05C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BA2AA4AD16EA29E100199370 /* iconFolder.png */,
+				BA2AA4AE16EA29E100199370 /* iconFolder@2x.png */,
+				BA2AA49716E9E78300199370 /* iconGroup.png */,
+				BA2AA49816E9E78300199370 /* iconGroup@2x.png */,
 				BA8CF26316E0F4590040677A /* iconEvent.png */,
 				BA8CF26416E0F4590040677A /* iconEvent@2x.png */,
 				BA8CF26516E0F4590040677A /* iconPatients.png */,
@@ -510,6 +587,10 @@
 				BA8CF26816E0F45A0040677A /* iconEvent@2x.png in Resources */,
 				BA8CF26916E0F45A0040677A /* iconPatients.png in Resources */,
 				BA8CF26A16E0F45A0040677A /* iconPatients@2x.png in Resources */,
+				BA2AA49916E9E78300199370 /* iconGroup.png in Resources */,
+				BA2AA49A16E9E78300199370 /* iconGroup@2x.png in Resources */,
+				BA2AA4AF16EA29E100199370 /* iconFolder.png in Resources */,
+				BA2AA4B016EA29E100199370 /* iconFolder@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +636,19 @@
 				BACA8DBE16E0AB7300C7F05C /* Performance.m in Sources */,
 				BACA8DC116E0AFD200C7F05C /* OVPerformanceDataHelper.m in Sources */,
 				BA8CF26D16E650130040677A /* NSManagedObject+RXCopying.m in Sources */,
+				BA8CF27316E6AE9F0040677A /* OVTeamDataHelper.m in Sources */,
+				BA8CF27616E6B06A0040677A /* OVTeamViewController.m in Sources */,
+				BA2AA49316E9E16A00199370 /* Team.m in Sources */,
+				BA2AA49616E9E17D00199370 /* TeamMember.m in Sources */,
+				BA2AA49D16E9E7F200199370 /* OVTeamMembersViewController.m in Sources */,
+				BA2AA4A916E9F65200199370 /* OVReportDataHelper.m in Sources */,
+				BA2AA4AC16E9F9D200199370 /* OVReportViewController.m in Sources */,
+				BA2AA4B916EA349B00199370 /* Report.m in Sources */,
+				BA2AA4BC16EA349C00199370 /* ReportField.m in Sources */,
+				BA2AA4BF16EA351700199370 /* OVReportDetailViewController.m in Sources */,
+				BA2AA4C216EA3C0900199370 /* OVReportTextCell.m in Sources */,
+				BA2AA4CA16EA456500199370 /* GradientButton.m in Sources */,
+				BA2AA4CB16EA456A00199370 /* Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

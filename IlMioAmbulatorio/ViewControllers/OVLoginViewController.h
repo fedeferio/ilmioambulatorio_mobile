@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MBProgressHUD.h"
 
+@class GradientButton;
+
 @interface OVLoginViewController : UIViewController<UIAlertViewDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textUser;
 @property (weak, nonatomic) IBOutlet UITextField *textPassword;
-@property (weak, nonatomic) IBOutlet UIButton *buttonLogin;
+@property (weak, nonatomic) IBOutlet GradientButton *buttonLogin;
 @property (strong, nonatomic) MBProgressHUD *progressHUD;
 
 @end

@@ -20,9 +20,34 @@
         <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Report" representedClassName="Report" syncable="YES">
+        <attribute name="db_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="patient" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasField" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReportField" inverseName="belongsToReport" inverseEntity="ReportField" syncable="YES"/>
+    </entity>
+    <entity name="ReportField" representedClassName="ReportField" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongsToReport" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Report" inverseName="hasField" inverseEntity="Report" syncable="YES"/>
+    </entity>
+    <entity name="Team" representedClassName="Team" syncable="YES">
+        <attribute name="db_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasMember" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TeamMember" inverseName="belongsToTeam" inverseEntity="TeamMember" syncable="YES"/>
+    </entity>
+    <entity name="TeamMember" representedClassName="TeamMember" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongsToTeam" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="hasMember" inverseEntity="Team" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Event" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="Patient" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="Performance" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Event" positionX="133" positionY="228" width="128" height="135"/>
+        <element name="Patient" positionX="133" positionY="228" width="128" height="135"/>
+        <element name="Performance" positionX="-108" positionY="267" width="128" height="75"/>
+        <element name="Team" positionX="160" positionY="18" width="128" height="90"/>
+        <element name="TeamMember" positionX="-117" positionY="51" width="128" height="75"/>
+        <element name="Report" positionX="18" positionY="171" width="128" height="105"/>
+        <element name="ReportField" positionX="27" positionY="180" width="128" height="105"/>
     </elements>
 </model>

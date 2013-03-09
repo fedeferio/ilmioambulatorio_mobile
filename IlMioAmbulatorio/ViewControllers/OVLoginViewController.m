@@ -10,6 +10,7 @@
 #import "AFHTTPClient.h"
 #import "OVAppDelegate.h"
 #import "OVGlobals.h"
+#import "GradientButton.h"
 
 @interface OVLoginViewController ()
 
@@ -26,6 +27,9 @@
     [self.progressHUD setLabelText:@"Loading"];
     [self.view addSubview:self.progressHUD];
     
+    [self.buttonLogin setGradientTint:[UIColor colorWithRed:238.0/255.0 green:148.0/255.0 blue:37.0/255.0 alpha:1]];
+    [self.buttonLogin setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.buttonLogin.titleLabel setShadowOffset:CGSizeMake(0, -1)];
 }
 
 - (void)didReceiveMemoryWarning

@@ -20,40 +20,6 @@
 
 @implementation OVPatientViewController
 
-
-//-(void)fetchPatientDataInDocument:(UIManagedDocument *)document
-//{
-//    [[OVPatientDataHelper sharedHelper] loadData:^{
-//        for (NSDictionary *dictionary in [OVPatientDataHelper sharedHelper].patients)
-//        {
-//            Patient *patient = nil;
-//            
-//            NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Patient"];
-//            request.predicate = [NSPredicate predicateWithFormat:@"cf = %@", dictionary[@"cf"]];
-//            NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"surname" ascending:YES];
-//            
-//            request.sortDescriptors = @[sortDescriptor];
-//            
-//            NSError *error = nil;
-//            NSArray *match = [document.managedObjectContext executeFetchRequest:request error:&error];
-//            
-//            if(match && match.count == 0)
-//            {
-//                patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
-//                                                        inManagedObjectContext:document.managedObjectContext];
-//                patient.name = dictionary[@"name"];
-//                patient.surname = dictionary[@"surname"];
-//                patient.cf = dictionary[@"cf"];
-//                patient.dateofBirth = [NSDate date];
-//                patient.phone = dictionary[@"phone"];
-//            }
-//        }
-//        
-//        [document saveToURL:document.fileURL forSaveOperation:UIDocumentSaveForOverwriting completionHandler:nil];
-//        
-//    }];
-//}
-
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     OVPatientCell *cell = (OVPatientCell *)[self.tableView dequeueReusableCellWithIdentifier:@"OVPatientCell"];

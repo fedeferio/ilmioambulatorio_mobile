@@ -38,6 +38,18 @@
                                         withTitle:@"Events"
                                           andIcon:@"iconEvent"];
     
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVTeamViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Teams"
+                                          andIcon:@"iconGroup"];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVReportViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Documents"
+                                          andIcon:@"iconFolder"];
+    
     [self.window setRootViewController:self.slideOut];
     
 }
