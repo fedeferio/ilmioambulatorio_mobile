@@ -9,8 +9,13 @@
 #import "CoreDataTableViewController.h"
 #import "Report.h"
 
-@interface OVReportDetailViewController : CoreDataTableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface OVReportDetailViewController : CoreDataTableViewController <UITableViewDelegate, UITableViewDataSource,
+UIPickerViewDataSource, UIPickerViewDelegate>
 
-@property (weak, nonatomic) Report* report;
+@property (weak, nonatomic) Report *report;
+@property (strong, nonatomic) NSArray *teams;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerTeams;
+@property (weak, nonatomic) IBOutlet UIView *viewPicker;
+@property int teamIndex;
 
 @end

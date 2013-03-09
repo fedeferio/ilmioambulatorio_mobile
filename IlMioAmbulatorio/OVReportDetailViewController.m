@@ -10,6 +10,7 @@
 #import "OVReportTextCell.h"
 #import "ReportField.h"
 #import "Report.h"
+#import "Team.h"
 #import "OVAppDelegate.h"
 
 @interface OVReportDetailViewController ()
@@ -110,11 +111,98 @@
 }
 
 
+-(void)fetchTeams
+{
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Team"];
+    
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                              ascending:YES]];
+    UIManagedDocument* doc = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
+    
+    self.teams = [doc.managedObjectContext executeFetchRequest:request error:nil];
+    
+    [self.pickerTeams reloadAllComponents];
+    
+}
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    if(!self.teams)
+    {
+        return 0;
+    }
+    return [self.teams count];
+}
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    Team *team;
+    team = self.teams[row];
+    
+    return team.name;
+}
+
+
+- (IBAction)confirmShare:(id)sender {
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        CGRect rect = self.viewPicker.frame;
+        rect.origin.y = self.view.frame.size.height;
+        self.viewPicker.frame = rect;
+    }];
+    
+    [self applyShare];
+}
+
+- (void)applyShare
+{
+    // Get Team and Report data
+    Team *team = (Team *)self.teams[self.teamIndex];
+    
+    // TODO
+    // Send report_id and team_id to web application
+    
+    // At the moment, app will only display an alertView
+    NSString *msgString = [NSString stringWithFormat:@"Il documento è stato condiviso con il team %@", team.name];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Condivisione documento"
+                                                        message:msgString
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Condividi"
+                                                                  style:UIBarButtonItemStylePlain
+                                                                 target:self
+                                                                 action:@selector(shareReport)];
+    self.navigationItem.rightBarButtonItem = barButton;
+    
+    // Load teams for picker
+    [self fetchTeams];
+}
+
+-(void)shareReport
+{
+    if (self.teams == nil || [self.teams count] == 0) {
+        return;
+    }
+    [UIView animateWithDuration:0.5 animations:^{
+        CGRect rect = self.viewPicker.frame;
+        rect.origin.y = self.view.frame.size.height - rect.size.height;
+        self.viewPicker.frame = rect;
+    }];
 }
 
 @end
