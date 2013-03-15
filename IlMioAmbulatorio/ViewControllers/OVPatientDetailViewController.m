@@ -26,6 +26,9 @@
     NSArray *keys = [[[self.patient entity] attributesByName] allKeys];
     self.patientTemp = [self.patient dictionaryWithValuesForKeys:keys];
     
+    
+    [self.tableView setBackgroundColor:[UIColor clearColor]];
+    
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"Salva"
                                                                   style:UIBarButtonItemStylePlain
                                                                  target:self

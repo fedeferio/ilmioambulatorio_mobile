@@ -1,46 +1,34 @@
 //
-//  OVTeamViewController.m
+//  OVPerformanceViewController.m
 //  IlMioAmbulatorio
 //
-//  Created by Develop on 05/03/13.
+//  Created by Develop on 14/03/13.
 //  Copyright (c) 2013 Openview. All rights reserved.
 //
 
-#import "OVTeamViewController.h"
-#import "OVTeamMembersViewController.h"
+#import "OVPerformanceViewController.h"
 #import "OVAppDelegate.h"
-#import "Team.h"
+#import "Performance.h"
 
-@interface OVTeamViewController ()
+@interface OVPerformanceViewController ()
 
 @end
 
-@implementation OVTeamViewController
-
+@implementation OVPerformanceViewController
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = (UITableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"OVTeamCell"];
+    UITableViewCell *cell = (UITableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"OVPerformanceCell"];
     if(cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"OVTeamCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"OVPerformanceCell"];
     
-    Team *team = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Performance *performance = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    [cell.imageView setImage:[UIImage imageNamed:@"avatarGroup.png"]];
-    
-    [cell.textLabel setText:team.name];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%d membri", [team.hasMember count]]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    [cell.textLabel setText:performance.name];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"Durata: %@ minuti", performance.duration]];
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    
-    Team *team = [self.fetchedResultsController objectAtIndexPath:path];
-    [((OVTeamMembersViewController *)segue.destinationViewController) setTeam:team];
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -51,7 +39,7 @@
 
 -(void)setUpFetchedResultController
 {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Team"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Performance"];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
                                                               ascending:YES]];
     

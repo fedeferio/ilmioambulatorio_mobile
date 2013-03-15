@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Clinic" representedClassName="Clinic" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closingTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contacts" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openingTime" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="db_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -42,12 +55,14 @@
         <relationship name="belongsToTeam" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Team" inverseName="hasMember" inverseEntity="Team" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="133" positionY="228" width="128" height="135"/>
-        <element name="Patient" positionX="133" positionY="228" width="128" height="135"/>
-        <element name="Performance" positionX="-108" positionY="267" width="128" height="75"/>
-        <element name="Team" positionX="160" positionY="18" width="128" height="90"/>
-        <element name="TeamMember" positionX="-117" positionY="51" width="128" height="75"/>
-        <element name="Report" positionX="18" positionY="171" width="128" height="105"/>
-        <element name="ReportField" positionX="27" positionY="180" width="128" height="105"/>
+        <element name="Clinic" positionX="198" positionY="378" width="128" height="120"/>
+        <element name="Event" positionX="-0" positionY="180" width="128" height="135"/>
+        <element name="Patient" positionX="189" positionY="180" width="128" height="135"/>
+        <element name="Performance" positionX="-171" positionY="177" width="128" height="75"/>
+        <element name="Report" positionX="18" positionY="378" width="128" height="105"/>
+        <element name="ReportField" positionX="-171" positionY="351" width="128" height="105"/>
+        <element name="Team" positionX="16" positionY="54" width="128" height="90"/>
+        <element name="TeamMember" positionX="-171" positionY="69" width="128" height="75"/>
+        <element name="Account" positionX="180" positionY="54" width="128" height="105"/>
     </elements>
 </model>

@@ -12,6 +12,8 @@
 #import "Performance.h"
 #import "OVPerformanceDataHelper.h"
 
+#define kColorOrange [UIColor colorWithRed:238.0/255.0 green:148.0/255.0 blue:37.0/255.0 alpha:1]
+
 @interface OVHomeViewController ()
 
 @end
@@ -181,6 +183,16 @@
                               // Reload picker data
                               [self fetchPerformances];
 						  }];
+    
+    [self.buttonCerca setGradientTint:kColorOrange];
+    [self.buttonCerca setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    [self.buttonCerca.titleLabel setShadowOffset:CGSizeMake(0, -1)];
+    
+    [self.barButtonItemOk setTintColor:kColorOrange];
+    [self.toolbarPicker setTintColor:kColorOrange];
+    
+    [self.navigationController.navigationBar setTintColor:kColorOrange];
+    [self setTitle:@"Home"];
 
 }
 

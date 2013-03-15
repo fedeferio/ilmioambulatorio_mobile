@@ -14,6 +14,8 @@
 #import "OVAppDelegate.h"
 #import "OVGlobals.h"
 
+#define kColorOrange [UIColor colorWithRed:238.0/255.0 green:148.0/255.0 blue:37.0/255.0 alpha:1]
+
 @interface OVPatientViewController ()
 
 @end
@@ -31,7 +33,10 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     
-    [cell.labelName setText:patient.name];
+    NSMutableString *patientInfo = [[NSMutableString alloc] initWithString:patient.name];
+    [patientInfo appendFormat:@" %@", patient.surname];
+    
+    [cell.labelName setText:patientInfo];
     [cell.labelData setText:[dateFormatter stringFromDate:patient.dateofBirth]];
     [cell.labelCF setText:patient.cf];
     
@@ -111,6 +116,8 @@
                               [self.tableView reloadData];
 						  }];
 	// Do any additional setup after loading the view.
+    
+    [self.searchBarPatient setTintColor:kColorOrange];
 }
 
 - (void)didReceiveMemoryWarning

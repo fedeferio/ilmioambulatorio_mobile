@@ -7,7 +7,9 @@
 //
 
 #import "OVGlobals.h"
+#import "OVAccountDataHelper.h"
 #import "OVPatientDataHelper.h"
+#import "OVClinicDataHelper.h"
 #import "OVEventDataHelper.h"
 #import "OVPerformanceDataHelper.h"
 #import "OVTeamDataHelper.h"
@@ -29,6 +31,9 @@
 
 +(void)updateAll:(UIManagedDocument*) document{
     
+    // Load Account data
+    [[OVAccountDataHelper sharedHelper] loadData:nil inDocument:document];
+    
     // Load Patients data
     [[OVPatientDataHelper sharedHelper] loadData:nil inDocument:document];
     
@@ -37,6 +42,9 @@
 
     // Load Performance data
     [[OVPerformanceDataHelper sharedHelper] loadData:nil inDocument:document];
+    
+    // Load Clinic data
+    [[OVClinicDataHelper sharedHelper] loadData:nil inDocument:document];
     
     // Load Team data
     [[OVTeamDataHelper sharedHelper] loadData:nil inDocument:document];

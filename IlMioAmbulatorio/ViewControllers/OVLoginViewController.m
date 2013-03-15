@@ -12,6 +12,8 @@
 #import "OVGlobals.h"
 #import "GradientButton.h"
 
+#define kColorOrange [UIColor colorWithRed:238.0/255.0 green:148.0/255.0 blue:37.0/255.0 alpha:1]
+
 @interface OVLoginViewController ()
 
 @end
@@ -27,7 +29,19 @@
     [self.progressHUD setLabelText:@"Loading"];
     [self.view addSubview:self.progressHUD];
     
-    [self.buttonLogin setGradientTint:[UIColor colorWithRed:238.0/255.0 green:148.0/255.0 blue:37.0/255.0 alpha:1]];
+    self.textUser.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    self.textUser.leftViewMode = UITextFieldViewModeAlways;
+    self.textUser.background = [[UIImage imageNamed:@"textField.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15)];
+
+    
+    self.textPassword.leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 20)];
+    self.textPassword.leftViewMode = UITextFieldViewModeAlways;
+    self.textPassword.background = [[UIImage imageNamed:@"textField.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 15, 15, 15)];
+    
+    [self.navigationController.navigationBar setTintColor:kColorOrange];
+    [self setTitle:@"Login"];
+    
+    [self.buttonLogin setGradientTint:kColorOrange];
     [self.buttonLogin setTitleShadowColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     [self.buttonLogin.titleLabel setShadowOffset:CGSizeMake(0, -1)];
 }
@@ -44,7 +58,6 @@
     
     [self.progressHUD show:YES];
 
-    //TODO:
     [((OVAppDelegate*) [UIApplication sharedApplication].delegate) userDidLogin];
 
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kURLBase]];

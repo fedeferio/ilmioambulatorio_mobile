@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *filteredArray;
 @property BOOL isSearching;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBarPatient;
 
 @end

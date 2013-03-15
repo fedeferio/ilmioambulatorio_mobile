@@ -1,35 +1,31 @@
 //
-//  OVTeamViewController.m
+//  OVClinicViewController.m
 //  IlMioAmbulatorio
 //
-//  Created by Develop on 05/03/13.
+//  Created by Develop on 14/03/13.
 //  Copyright (c) 2013 Openview. All rights reserved.
 //
 
-#import "OVTeamViewController.h"
-#import "OVTeamMembersViewController.h"
+#import "OVClinicViewController.h"
+#import "OVClinicDetailViewController.h"
 #import "OVAppDelegate.h"
-#import "Team.h"
+#import "Clinic.h"
 
-@interface OVTeamViewController ()
+@interface OVClinicViewController ()
 
 @end
 
-@implementation OVTeamViewController
-
+@implementation OVClinicViewController
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = (UITableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"OVTeamCell"];
+    UITableViewCell *cell = (UITableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:@"OVClinicCell"];
     if(cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"OVTeamCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"OVClinicCell"];
     
-    Team *team = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Clinic *clinic = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    [cell.imageView setImage:[UIImage imageNamed:@"avatarGroup.png"]];
-    
-    [cell.textLabel setText:team.name];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%d membri", [team.hasMember count]]];
+    [cell.textLabel setText:clinic.name];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -38,8 +34,8 @@
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
     
-    Team *team = [self.fetchedResultsController objectAtIndexPath:path];
-    [((OVTeamMembersViewController *)segue.destinationViewController) setTeam:team];
+    Clinic *clinic = [self.fetchedResultsController objectAtIndexPath:path];
+    [((OVClinicDetailViewController *)segue.destinationViewController) setClinic:clinic];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,7 +47,7 @@
 
 -(void)setUpFetchedResultController
 {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Team"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Clinic"];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
                                                               ascending:YES]];
     
@@ -62,7 +58,6 @@
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
 }
-
 
 - (void)viewDidLoad
 {

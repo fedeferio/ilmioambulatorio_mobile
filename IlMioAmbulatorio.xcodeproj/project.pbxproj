@@ -74,6 +74,32 @@
 		BA8CF27616E6B06A0040677A /* OVTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA8CF27516E6B06A0040677A /* OVTeamViewController.m */; };
 		BA90CA2A16C1201F009EBEA9 /* OVPatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */; };
 		BA90CA2F16C12297009EBEA9 /* OVPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */; };
+		BAA8A15F16F1C6E900580EF0 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A15E16F1C6E900580EF0 /* Account.m */; };
+		BAA8A16216F1CD3400580EF0 /* OVPerformanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A16116F1CD3400580EF0 /* OVPerformanceViewController.m */; };
+		BAA8A16516F1CEBD00580EF0 /* OVClinicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A16416F1CEBD00580EF0 /* OVClinicViewController.m */; };
+		BAA8A16816F1D6E000580EF0 /* OVClinicDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A16716F1D6E000580EF0 /* OVClinicDataHelper.m */; };
+		BAA8A16B16F1D6F300580EF0 /* OVAccountDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A16A16F1D6F300580EF0 /* OVAccountDataHelper.m */; };
+		BAA8A16E16F1EA8B00580EF0 /* OVClinicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A16D16F1EA8A00580EF0 /* OVClinicDetailViewController.m */; };
+		BAA8A17116F2157000580EF0 /* OVGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A17016F2157000580EF0 /* OVGradientView.m */; };
+		BAA8A17716F21EB400580EF0 /* backgroundMain-h586@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17216F21EB400580EF0 /* backgroundMain-h586@2x.png */; };
+		BAA8A17816F21EB400580EF0 /* backgroundMain.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17316F21EB400580EF0 /* backgroundMain.png */; };
+		BAA8A17916F21EB400580EF0 /* backgroundMain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17416F21EB400580EF0 /* backgroundMain@2x.png */; };
+		BAA8A17A16F21EB400580EF0 /* textField.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17516F21EB400580EF0 /* textField.png */; };
+		BAA8A17B16F21EB400580EF0 /* textField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17616F21EB400580EF0 /* textField@2x.png */; };
+		BAA8A17F16F22BCF00580EF0 /* backgroundPlain-h568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17C16F22BCD00580EF0 /* backgroundPlain-h568@2x.png */; };
+		BAA8A18016F22BCF00580EF0 /* backgroundPlain.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17D16F22BCE00580EF0 /* backgroundPlain.png */; };
+		BAA8A18116F22BCF00580EF0 /* backgroundPlain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A17E16F22BCF00580EF0 /* backgroundPlain@2x.png */; };
+		BAA8A18816F2315300580EF0 /* iconAccount.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18216F2315000580EF0 /* iconAccount.png */; };
+		BAA8A18916F2315300580EF0 /* iconAccount@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18316F2315100580EF0 /* iconAccount@2x.png */; };
+		BAA8A18A16F2315300580EF0 /* iconClinic.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18416F2315100580EF0 /* iconClinic.png */; };
+		BAA8A18B16F2315300580EF0 /* iconClinic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18516F2315200580EF0 /* iconClinic@2x.png */; };
+		BAA8A18C16F2315300580EF0 /* iconPerformance.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18616F2315200580EF0 /* iconPerformance.png */; };
+		BAA8A18D16F2315300580EF0 /* iconPerformance@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18716F2315200580EF0 /* iconPerformance@2x.png */; };
+		BAA8A19016F2340A00580EF0 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18E16F2340900580EF0 /* avatar.png */; };
+		BAA8A19116F2340A00580EF0 /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A18F16F2340A00580EF0 /* avatar@2x.png */; };
+		BAA8A19416F2344200580EF0 /* avatarGroup.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A19216F2344100580EF0 /* avatarGroup.png */; };
+		BAA8A19516F2344200580EF0 /* avatarGroup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAA8A19316F2344200580EF0 /* avatarGroup@2x.png */; };
+		BAA8A19816F25F1500580EF0 /* OVAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA8A19716F25F1400580EF0 /* OVAccountViewController.m */; };
 		BABBD94A16B2D46900291C08 /* OVLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94916B2D46900291C08 /* OVLoginViewController.m */; };
 		BABBD95F16B2D62700291C08 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94D16B2D62700291C08 /* AFHTTPClient.m */; };
 		BABBD96016B2D62700291C08 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BABBD94F16B2D62700291C08 /* AFHTTPRequestOperation.m */; };
@@ -88,6 +114,7 @@
 		BABBD96B16B2D72B00291C08 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */; };
 		BABBD96D16B2D73100291C08 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */; };
 		BABBD96F16B2D73B00291C08 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABBD96E16B2D73B00291C08 /* CFNetwork.framework */; };
+		BAC7994916EFBA7C00406A35 /* Clinic.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC7994816EFBA7C00406A35 /* Clinic.m */; };
 		BACA8DBB16E0A70B00C7F05C /* OVHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA8DBA16E0A70B00C7F05C /* OVHomeViewController.m */; };
 		BACA8DBE16E0AB7300C7F05C /* Performance.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA8DBD16E0AB7300C7F05C /* Performance.m */; };
 		BACA8DC116E0AFD200C7F05C /* OVPerformanceDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BACA8DC016E0AFD200C7F05C /* OVPerformanceDataHelper.m */; };
@@ -200,6 +227,40 @@
 		BA90CA2916C1201F009EBEA9 /* OVPatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientViewController.m; path = ViewControllers/OVPatientViewController.m; sourceTree = "<group>"; };
 		BA90CA2D16C12297009EBEA9 /* OVPatientCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVPatientCell.h; path = Support/OVPatientCell.h; sourceTree = "<group>"; };
 		BA90CA2E16C12297009EBEA9 /* OVPatientCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVPatientCell.m; path = Support/OVPatientCell.m; sourceTree = "<group>"; };
+		BAA8A15D16F1C6E900580EF0 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		BAA8A15E16F1C6E900580EF0 /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		BAA8A16016F1CD3300580EF0 /* OVPerformanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVPerformanceViewController.h; sourceTree = "<group>"; };
+		BAA8A16116F1CD3400580EF0 /* OVPerformanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVPerformanceViewController.m; sourceTree = "<group>"; };
+		BAA8A16316F1CEBC00580EF0 /* OVClinicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVClinicViewController.h; sourceTree = "<group>"; };
+		BAA8A16416F1CEBD00580EF0 /* OVClinicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVClinicViewController.m; sourceTree = "<group>"; };
+		BAA8A16616F1D6E000580EF0 /* OVClinicDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVClinicDataHelper.h; sourceTree = "<group>"; };
+		BAA8A16716F1D6E000580EF0 /* OVClinicDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVClinicDataHelper.m; sourceTree = "<group>"; };
+		BAA8A16916F1D6F200580EF0 /* OVAccountDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVAccountDataHelper.h; sourceTree = "<group>"; };
+		BAA8A16A16F1D6F300580EF0 /* OVAccountDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVAccountDataHelper.m; sourceTree = "<group>"; };
+		BAA8A16C16F1EA8900580EF0 /* OVClinicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVClinicDetailViewController.h; sourceTree = "<group>"; };
+		BAA8A16D16F1EA8A00580EF0 /* OVClinicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVClinicDetailViewController.m; sourceTree = "<group>"; };
+		BAA8A16F16F2157000580EF0 /* OVGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVGradientView.h; sourceTree = "<group>"; };
+		BAA8A17016F2157000580EF0 /* OVGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVGradientView.m; sourceTree = "<group>"; };
+		BAA8A17216F21EB400580EF0 /* backgroundMain-h586@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundMain-h586@2x.png"; sourceTree = "<group>"; };
+		BAA8A17316F21EB400580EF0 /* backgroundMain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundMain.png; sourceTree = "<group>"; };
+		BAA8A17416F21EB400580EF0 /* backgroundMain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundMain@2x.png"; sourceTree = "<group>"; };
+		BAA8A17516F21EB400580EF0 /* textField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textField.png; sourceTree = "<group>"; };
+		BAA8A17616F21EB400580EF0 /* textField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textField@2x.png"; sourceTree = "<group>"; };
+		BAA8A17C16F22BCD00580EF0 /* backgroundPlain-h568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundPlain-h568@2x.png"; sourceTree = "<group>"; };
+		BAA8A17D16F22BCE00580EF0 /* backgroundPlain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundPlain.png; sourceTree = "<group>"; };
+		BAA8A17E16F22BCF00580EF0 /* backgroundPlain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundPlain@2x.png"; sourceTree = "<group>"; };
+		BAA8A18216F2315000580EF0 /* iconAccount.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconAccount.png; sourceTree = "<group>"; };
+		BAA8A18316F2315100580EF0 /* iconAccount@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconAccount@2x.png"; sourceTree = "<group>"; };
+		BAA8A18416F2315100580EF0 /* iconClinic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconClinic.png; sourceTree = "<group>"; };
+		BAA8A18516F2315200580EF0 /* iconClinic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconClinic@2x.png"; sourceTree = "<group>"; };
+		BAA8A18616F2315200580EF0 /* iconPerformance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconPerformance.png; sourceTree = "<group>"; };
+		BAA8A18716F2315200580EF0 /* iconPerformance@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconPerformance@2x.png"; sourceTree = "<group>"; };
+		BAA8A18E16F2340900580EF0 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
+		BAA8A18F16F2340A00580EF0 /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
+		BAA8A19216F2344100580EF0 /* avatarGroup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatarGroup.png; sourceTree = "<group>"; };
+		BAA8A19316F2344200580EF0 /* avatarGroup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatarGroup@2x.png"; sourceTree = "<group>"; };
+		BAA8A19616F25F1300580EF0 /* OVAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVAccountViewController.h; sourceTree = "<group>"; };
+		BAA8A19716F25F1400580EF0 /* OVAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVAccountViewController.m; sourceTree = "<group>"; };
 		BABBD94816B2D46900291C08 /* OVLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OVLoginViewController.h; path = ViewControllers/OVLoginViewController.h; sourceTree = "<group>"; };
 		BABBD94916B2D46900291C08 /* OVLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OVLoginViewController.m; path = ViewControllers/OVLoginViewController.m; sourceTree = "<group>"; };
 		BABBD94C16B2D62700291C08 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -225,6 +286,8 @@
 		BABBD96A16B2D72B00291C08 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BABBD96C16B2D73100291C08 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BABBD96E16B2D73B00291C08 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BAC7994716EFBA7C00406A35 /* Clinic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clinic.h; sourceTree = "<group>"; };
+		BAC7994816EFBA7C00406A35 /* Clinic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Clinic.m; sourceTree = "<group>"; };
 		BACA8DB916E0A70B00C7F05C /* OVHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OVHomeViewController.h; sourceTree = "<group>"; };
 		BACA8DBA16E0A70B00C7F05C /* OVHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OVHomeViewController.m; sourceTree = "<group>"; };
 		BACA8DBC16E0AB7300C7F05C /* Performance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Performance.h; sourceTree = "<group>"; };
@@ -390,6 +453,14 @@
 				BA2AA4BB16EA349C00199370 /* ReportField.m */,
 				BA2AA4B716EA349A00199370 /* Report.h */,
 				BA2AA4B816EA349A00199370 /* Report.m */,
+				BAC7994716EFBA7C00406A35 /* Clinic.h */,
+				BAC7994816EFBA7C00406A35 /* Clinic.m */,
+				BAA8A15D16F1C6E900580EF0 /* Account.h */,
+				BAA8A15E16F1C6E900580EF0 /* Account.m */,
+				BAA8A16616F1D6E000580EF0 /* OVClinicDataHelper.h */,
+				BAA8A16716F1D6E000580EF0 /* OVClinicDataHelper.m */,
+				BAA8A16916F1D6F200580EF0 /* OVAccountDataHelper.h */,
+				BAA8A16A16F1D6F300580EF0 /* OVAccountDataHelper.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -440,6 +511,8 @@
 				BA5AB4FE16D6337E006DA8E0 /* OVEventCell.m */,
 				BA2AA4C016EA3C0900199370 /* OVReportTextCell.h */,
 				BA2AA4C116EA3C0900199370 /* OVReportTextCell.m */,
+				BAA8A16F16F2157000580EF0 /* OVGradientView.h */,
+				BAA8A17016F2157000580EF0 /* OVGradientView.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -465,6 +538,14 @@
 				BA2AA4AB16E9F9D200199370 /* OVReportViewController.m */,
 				BA2AA4BD16EA351600199370 /* OVReportDetailViewController.h */,
 				BA2AA4BE16EA351700199370 /* OVReportDetailViewController.m */,
+				BAA8A16016F1CD3300580EF0 /* OVPerformanceViewController.h */,
+				BAA8A16116F1CD3400580EF0 /* OVPerformanceViewController.m */,
+				BAA8A16316F1CEBC00580EF0 /* OVClinicViewController.h */,
+				BAA8A16416F1CEBD00580EF0 /* OVClinicViewController.m */,
+				BAA8A16C16F1EA8900580EF0 /* OVClinicDetailViewController.h */,
+				BAA8A16D16F1EA8A00580EF0 /* OVClinicDetailViewController.m */,
+				BAA8A19616F25F1300580EF0 /* OVAccountViewController.h */,
+				BAA8A19716F25F1400580EF0 /* OVAccountViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -498,6 +579,24 @@
 		BACA8DC216E0BC7900C7F05C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BAA8A18E16F2340900580EF0 /* avatar.png */,
+				BAA8A19216F2344100580EF0 /* avatarGroup.png */,
+				BAA8A19316F2344200580EF0 /* avatarGroup@2x.png */,
+				BAA8A18F16F2340A00580EF0 /* avatar@2x.png */,
+				BAA8A17216F21EB400580EF0 /* backgroundMain-h586@2x.png */,
+				BAA8A17316F21EB400580EF0 /* backgroundMain.png */,
+				BAA8A18216F2315000580EF0 /* iconAccount.png */,
+				BAA8A18316F2315100580EF0 /* iconAccount@2x.png */,
+				BAA8A18416F2315100580EF0 /* iconClinic.png */,
+				BAA8A18516F2315200580EF0 /* iconClinic@2x.png */,
+				BAA8A18616F2315200580EF0 /* iconPerformance.png */,
+				BAA8A18716F2315200580EF0 /* iconPerformance@2x.png */,
+				BAA8A17416F21EB400580EF0 /* backgroundMain@2x.png */,
+				BAA8A17516F21EB400580EF0 /* textField.png */,
+				BAA8A17C16F22BCD00580EF0 /* backgroundPlain-h568@2x.png */,
+				BAA8A17D16F22BCE00580EF0 /* backgroundPlain.png */,
+				BAA8A17E16F22BCF00580EF0 /* backgroundPlain@2x.png */,
+				BAA8A17616F21EB400580EF0 /* textField@2x.png */,
 				BA2AA4AD16EA29E100199370 /* iconFolder.png */,
 				BA2AA4AE16EA29E100199370 /* iconFolder@2x.png */,
 				BA2AA49716E9E78300199370 /* iconGroup.png */,
@@ -591,6 +690,24 @@
 				BA2AA49A16E9E78300199370 /* iconGroup@2x.png in Resources */,
 				BA2AA4AF16EA29E100199370 /* iconFolder.png in Resources */,
 				BA2AA4B016EA29E100199370 /* iconFolder@2x.png in Resources */,
+				BAA8A17716F21EB400580EF0 /* backgroundMain-h586@2x.png in Resources */,
+				BAA8A17816F21EB400580EF0 /* backgroundMain.png in Resources */,
+				BAA8A17916F21EB400580EF0 /* backgroundMain@2x.png in Resources */,
+				BAA8A17A16F21EB400580EF0 /* textField.png in Resources */,
+				BAA8A17B16F21EB400580EF0 /* textField@2x.png in Resources */,
+				BAA8A17F16F22BCF00580EF0 /* backgroundPlain-h568@2x.png in Resources */,
+				BAA8A18016F22BCF00580EF0 /* backgroundPlain.png in Resources */,
+				BAA8A18116F22BCF00580EF0 /* backgroundPlain@2x.png in Resources */,
+				BAA8A18816F2315300580EF0 /* iconAccount.png in Resources */,
+				BAA8A18916F2315300580EF0 /* iconAccount@2x.png in Resources */,
+				BAA8A18A16F2315300580EF0 /* iconClinic.png in Resources */,
+				BAA8A18B16F2315300580EF0 /* iconClinic@2x.png in Resources */,
+				BAA8A18C16F2315300580EF0 /* iconPerformance.png in Resources */,
+				BAA8A18D16F2315300580EF0 /* iconPerformance@2x.png in Resources */,
+				BAA8A19016F2340A00580EF0 /* avatar.png in Resources */,
+				BAA8A19116F2340A00580EF0 /* avatar@2x.png in Resources */,
+				BAA8A19416F2344200580EF0 /* avatarGroup.png in Resources */,
+				BAA8A19516F2344200580EF0 /* avatarGroup@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +766,15 @@
 				BA2AA4C216EA3C0900199370 /* OVReportTextCell.m in Sources */,
 				BA2AA4CA16EA456500199370 /* GradientButton.m in Sources */,
 				BA2AA4CB16EA456A00199370 /* Common.m in Sources */,
+				BAC7994916EFBA7C00406A35 /* Clinic.m in Sources */,
+				BAA8A15F16F1C6E900580EF0 /* Account.m in Sources */,
+				BAA8A16216F1CD3400580EF0 /* OVPerformanceViewController.m in Sources */,
+				BAA8A16516F1CEBD00580EF0 /* OVClinicViewController.m in Sources */,
+				BAA8A16816F1D6E000580EF0 /* OVClinicDataHelper.m in Sources */,
+				BAA8A16B16F1D6F300580EF0 /* OVAccountDataHelper.m in Sources */,
+				BAA8A16E16F1EA8B00580EF0 /* OVClinicDetailViewController.m in Sources */,
+				BAA8A17116F2157000580EF0 /* OVGradientView.m in Sources */,
+				BAA8A19816F25F1500580EF0 /* OVAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

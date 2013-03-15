@@ -17,5 +17,6 @@
 @property (strong, nonatomic) UIManagedDocument *dataDocument;
 
 -(void)userDidLogin;
+- (void)userDidLogout;
 
 @end

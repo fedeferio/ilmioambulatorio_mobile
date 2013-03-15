@@ -12,6 +12,14 @@
 
 @implementation OVAppDelegate
 
+- (void)userDidLogout
+{
+//    OVLoginViewController
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+    UINavigationController* controller = [storyboard instantiateInitialViewController];
+    self.window.rootViewController = controller;
+}
+
 - (void)userDidLogin
 {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
@@ -49,6 +57,24 @@
                                            tagged:1
                                         withTitle:@"Documents"
                                           andIcon:@"iconFolder"];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVClinicViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Clinics"
+                                          andIcon:@"iconClinic"];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPerformanceViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Performances"
+                                          andIcon:@"iconPerformance"];
+    
+    controller = [storyboard instantiateViewControllerWithIdentifier:@"OVAccountViewController"];
+    [self.slideOut addViewControllerToLastSection:controller
+                                           tagged:1
+                                        withTitle:@"Account"
+                                          andIcon:@"iconAccount"];
     
     [self.window setRootViewController:self.slideOut];
     
