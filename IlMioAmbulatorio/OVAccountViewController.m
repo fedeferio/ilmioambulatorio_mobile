@@ -71,9 +71,11 @@
     self.arrayTable = @[
                         @{@"label": @"Username", @"placeholder": @"Username", @"tag": @(0), @"type":@(kTypeNormal), @"field":@"username"},
                         @{@"label": @"Email", @"placeholder": @"Email", @"tag": @(1), @"type":@(kTypeNormal), @"field":@"email"},
-                        @{@"label": @"Name", @"placeholder": @"Name", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"name"},
-                        @{@"label": @"Surname", @"placeholder": @"Surname", @"tag": @(3), @"type":@(kTypeNormal), @"field":@"surname"}
+                        @{@"label": @"Nome", @"placeholder": @"Nome", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"name"},
+                        @{@"label": @"Cognome", @"placeholder": @"Cognome", @"tag": @(3), @"type":@(kTypeNormal), @"field":@"surname"}
                         ];
+    
+    [self setTitle:@"Account"];
 }
 
 

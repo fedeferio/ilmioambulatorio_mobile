@@ -17,5 +17,6 @@ UIPickerViewDataSource, UIPickerViewDelegate>
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerTeams;
 @property (weak, nonatomic) IBOutlet UIView *viewPicker;
 @property int teamIndex;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitlePatient;
 
 @end

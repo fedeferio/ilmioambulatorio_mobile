@@ -31,9 +31,9 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     
-    [cell.labelTitle setText:event.title];
-    [cell.labelStart setText:[dateFormatter stringFromDate:event.start]];
-    [cell.labelEnd setText:[dateFormatter stringFromDate:event.end]];
+    [cell.labelTitle setText:event.body];
+    [cell.labelEnd setText:[dateFormatter stringFromDate:event.start]];
+    [cell.labelStart setText:[dateFormatter stringFromDate:event.end]];
     
     return cell;
 }
@@ -43,21 +43,21 @@
     self.ekEvent = [self.fetchedResultsController objectAtIndexPath:indexPath];
     if(self.ekEvent.event_identifier)
     {
+        // Define EKEvent object using event_identifier
         EKEvent* event = [[OVEventDataHelper sharedHelper].eventStore eventWithIdentifier:self.ekEvent.event_identifier];
-        
+        // Define EKEventViewController object
         if (self.eventController == nil) {
             self.eventController = [[EKEventViewController alloc] initWithNibName:nil bundle:nil];
         }
         [self.eventController setDelegate:self];
+        // Link EKEventViewController to EKEvent
         self.eventController.event = event;
-        
         // Allow event editing.
         self.eventController.allowsEditing = YES;
-        
+        // Move to the just defined controller
         UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:self.eventController];
-        
         [self presentViewController:nav animated:YES completion:nil];
-//        [self.navigationController pushViewController:self.eventController animated:YES];
+        
     }
     
 }
@@ -92,6 +92,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setTitle:@"Eventi"];
 }
 
 -(void)setUpFetchedResultController

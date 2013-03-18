@@ -33,8 +33,14 @@
         
         NSDictionary* dict = self.availabilities[indexPath.row];
         
-        cell.textLabel.text = dict[@"start"];
-        cell.detailTextLabel.text = dict[@"end"];
+        NSMutableString *stringStart = [[NSMutableString alloc] initWithString:@"Ora Inizio: "];
+        NSMutableString *stringEnd = [[NSMutableString alloc] initWithString:@"Ora Fine: "];
+        
+        [stringStart appendString:dict[@"start"]];
+        [stringEnd appendString:dict[@"end"]];
+        
+        cell.textLabel.text = stringStart;
+        cell.detailTextLabel.text = stringEnd;
         
         return cell;
     }
@@ -122,7 +128,7 @@
     NSDate *endDate = [calendar dateByAddingComponents:components toDate:startDate options:0];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(start >= %@) AND (start <= %@)", startDate, endDate];
     
-    [request setPredicate:predicate];
+    //[request setPredicate:predicate];
     
     UIManagedDocument* doc = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
     

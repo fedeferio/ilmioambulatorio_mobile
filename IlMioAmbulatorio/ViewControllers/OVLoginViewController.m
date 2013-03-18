@@ -56,36 +56,32 @@
     [self.textPassword resignFirstResponder];
     [self.textUser resignFirstResponder];
     
+    // Show loading circle
     [self.progressHUD show:YES];
-
-    [((OVAppDelegate*) [UIApplication sharedApplication].delegate) userDidLogin];
-
+    // Define AFHTTPClient object using web application URL
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:kURLBase]];
-	
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
-    
+    // Get user login paramaters
     NSDictionary* loginParams = @{@"_username":self.textUser.text,@"_password":self.textPassword.text};
-    
+    // Get token from web application sending login parameters (username and password)
 	[httpClient postPath:@"security/token/create.json"
               parameters:loginParams
                  success:^(AFHTTPRequestOperation *operation, id responseObject) {
                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
                      NSError* error;
-                     
+                     // Get JSON response and store token in application
                      id jResult = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONWritingPrettyPrinted error:&error];
                      [[NSUserDefaults standardUserDefaults] setObject:jResult[@"WSSE"] forKey:@"loginToken"];
-                     
-                     // Load user data
+                     // Update application data
                      UIManagedDocument* doc = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
                      [OVGlobals updateAll:doc];
-                     
                      [((OVAppDelegate*) [UIApplication sharedApplication].delegate) userDidLogin];
-                     
-                     [self.progressHUD hide:YES];
-                     
+                     // Hide loading circle
+                     [self.progressHUD hide:YES];                     
                  }
                  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                     // Define alertView with login error info
                      UIAlertView *alert = [[UIAlertView alloc]initWithTitle:NSLocalizedString(@"Error",)
                                                                     message:NSLocalizedString(@"LoginError",)
                                                                    delegate:self

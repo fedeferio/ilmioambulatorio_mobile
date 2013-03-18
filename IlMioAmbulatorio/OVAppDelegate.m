@@ -22,52 +22,55 @@
 
 - (void)userDidLogin
 {
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
+    
+    // Define a AMSlideOutNavigationController object
     self.slideOut = [AMSlideOutNavigationController slideOutNavigation];
     UIViewController *controller = nil;
-    
+    // Add a section
     [self.slideOut addSectionWithTitle:@"Menu"];
-    
+    // Add element to created section
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVHomeViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Home"
-                                          andIcon:@"iconHome.png"];
+                                        withTitle:@"Home" // Element name
+                                          andIcon:@"iconHome.png"]; // Element icon
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPatientViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Patients"
+                                        withTitle:@"Pazienti"
                                           andIcon:@"iconPatients"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVEventViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Events"
+                                        withTitle:@"Eventi"
                                           andIcon:@"iconEvent"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVTeamViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Teams"
+                                        withTitle:@"Team"
                                           andIcon:@"iconGroup"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVReportViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Documents"
+                                        withTitle:@"Documenti"
                                           andIcon:@"iconFolder"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVClinicViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Clinics"
+                                        withTitle:@"Sedi"
                                           andIcon:@"iconClinic"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVPerformanceViewController"];
     [self.slideOut addViewControllerToLastSection:controller
                                            tagged:1
-                                        withTitle:@"Performances"
+                                        withTitle:@"Prestazioni"
                                           andIcon:@"iconPerformance"];
     
     controller = [storyboard instantiateViewControllerWithIdentifier:@"OVAccountViewController"];

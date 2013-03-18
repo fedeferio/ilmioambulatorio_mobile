@@ -85,18 +85,19 @@
 
 -(void)setUpFetchedResultController
 {
+    // Define request for Patient entity
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Patient"];
     request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"surname"
                                                               ascending:YES
                                                                selector:@selector(localizedCaseInsensitiveCompare:)]];
-    
+    // Get UIManagedDocument from OVAppDelegate
     UIManagedDocument* doc = ((OVAppDelegate*)[UIApplication sharedApplication].delegate).dataDocument;
-    
+    // Execute request and get patients data
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:doc.managedObjectContext
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
-
+    // Display data in tableView
     [self.tableView reloadData];
     
 //    [self fetchPatientDataInDocument:doc];
@@ -118,6 +119,7 @@
 	// Do any additional setup after loading the view.
     
     [self.searchBarPatient setTintColor:kColorOrange];
+    [self setTitle:@"Pazienti"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -59,7 +59,6 @@
             break;
     }
     
-    
     return nil;
 }
 
@@ -188,6 +187,10 @@
                                                                  target:self
                                                                  action:@selector(shareReport)];
     self.navigationItem.rightBarButtonItem = barButton;
+    
+    [self setTitle:self.report.name];
+    
+    [self.labelTitlePatient setText:self.report.patient];
     
     // Load teams for picker
     [self fetchTeams];

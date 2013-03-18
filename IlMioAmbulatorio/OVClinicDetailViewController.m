@@ -19,7 +19,6 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"%d", [self.arrayTable count]);
     return [self.arrayTable count];
 }
 
@@ -57,12 +56,14 @@
     [_tableView setBackgroundColor:[UIColor clearColor]];
     
     self.arrayTable = @[
-                        @{@"label": @"Name", @"placeholder": @"Name", @"tag": @(1), @"type":@(kTypeNormal), @"field":@"name"},
-                        @{@"label": @"Address", @"placeholder": @"Address", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"address"},
-                        @{@"label": @"Contacts", @"placeholder": @"Contacts", @"tag": @(3), @"type":@(kTypeNormal), @"field":@"contacts"},
-                        @{@"label": @"Opening Time", @"placeholder": @"Opening Time", @"tag": @(4), @"type":@(kTypeNormal), @"field":@"openingTime"},
-                        @{@"label": @"Closing Time", @"placeholder": @"Closing Time", @"tag": @(5), @"type":@(kTypeNormal), @"field":@"closingTime"}
+                        @{@"label": @"Nome", @"placeholder": @"Nome", @"tag": @(1), @"type":@(kTypeNormal), @"field":@"name"},
+                        @{@"label": @"Indirizzo", @"placeholder": @"Indirizzo", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"address"},
+                        @{@"label": @"Contatti", @"placeholder": @"Contatti", @"tag": @(3), @"type":@(kTypeNormal), @"field":@"contacts"},
+                        @{@"label": @"Apertura", @"placeholder": @"Apertura", @"tag": @(4), @"type":@(kTypeNormal), @"field":@"openingTime"},
+                        @{@"label": @"Chiusura", @"placeholder": @"Chiusura", @"tag": @(5), @"type":@(kTypeNormal), @"field":@"closingTime"}
                         ];
+    
+    [self setTitle:self.clinic.name];
 }
 
 @end

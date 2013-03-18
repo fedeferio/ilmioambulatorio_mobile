@@ -35,7 +35,7 @@
                                                                  action:@selector(saveFields)];
     self.navigationItem.rightBarButtonItem = barButton;
     self.navigationItem.hidesBackButton = YES;
-    barButton = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+    barButton = [[UIBarButtonItem alloc] initWithTitle:@"Pazienti"
                                                  style:UIBarButtonItemStylePlain
                                                 target:self
                                                 action:@selector(goBack)];
@@ -61,9 +61,9 @@
     }
     
     self.arrayTable = @[
-                        @{@"label": @"Name", @"placeholder": @"Name", @"tag": @(1), @"type":@(kTypeNormal), @"field":@"name"},
-                        @{@"label": @"Surname", @"placeholder": @"Surname", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"surname"},
-                        @{@"label": @"Phone", @"placeholder": @"Phone", @"tag": @(3), @"type":@(kTypeTelephone), @"field":@"phone"}
+                        @{@"label": @"Nome", @"placeholder": @"Nome", @"tag": @(1), @"type":@(kTypeNormal), @"field":@"name"},
+                        @{@"label": @"Cognome", @"placeholder": @"Cognome", @"tag": @(2), @"type":@(kTypeNormal), @"field":@"surname"},
+                        @{@"label": @"Telefono", @"placeholder": @"Telefono", @"tag": @(3), @"type":@(kTypeTelephone), @"field":@"phone"}
                         ];
     
 }
@@ -250,6 +250,7 @@
     }
 }
 
+// Get image from library
 - (void)openLibraryPicker
 {
 	self.picker = [[UIImagePickerController alloc] init];
@@ -260,7 +261,7 @@
     
     [self presentViewController:self.picker animated:YES completion:^{}];
 }
-
+// Get image from camera
 - (void)openImagePicker
 {
 	self.picker = [[UIImagePickerController alloc] init];

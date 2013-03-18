@@ -26,6 +26,7 @@
     Report *report = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     [cell.textLabel setText:report.name];
+    
     [cell.detailTextLabel setText:report.patient];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
@@ -64,6 +65,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self setTitle:@"Documenti"];
 }
 
 @end
